@@ -1,5 +1,5 @@
 //
-//  Untitled.swift
+//  AssetTests.swift
 //  Bwallet
 //
 //  Created by Jun on 18/2/25.
@@ -9,8 +9,9 @@ import Testing
 @testable import Domain
 
 struct AssetTests {
-  @Test func testDecoding() throws {
-    let jsonData = try #require("""
+  @Test func testDecodingSuccess() throws {
+    let jsonData = try #require(
+        """
         [
             {
                 "name":"bitcoin",
@@ -55,9 +56,8 @@ struct AssetTests {
                 "amount": 1000000000000000000000000
             }
         ]
-        """
-      .data(using: .utf8))
-    
+        """.data(using: .utf8)
+    )
     
     let decoder = JSONDecoder()
     decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -83,5 +83,26 @@ struct AssetTests {
     ]
     
     #expect(givenAssets == expectedAssets)
+  }
+  
+  @Test func testDecodingFailure() throws {
+    let malformedJsonData = try #require(
+        """
+        [
+            {
+                "name":1
+                "symbol":2
+                "id":"1",
+                "amount": "2.1"
+            }
+        ]
+        """.data(using: .utf8)
+    )
+    
+    #expect(throws: DecodingError.self) {
+      let decoder = JSONDecoder()
+      decoder.keyDecodingStrategy = .convertFromSnakeCase
+      _ = try decoder.decode([Asset].self, from: malformedJsonData)
+    }
   }
 }
