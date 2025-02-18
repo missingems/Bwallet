@@ -10,9 +10,9 @@ import Domain
 import Service
 
 final class CurrencyService: Service.CurrencyService {
-  let networkClient: NetworkClient
+  let networkClient: any Service.NetworkClient
   
-  init(networkClient: NetworkClient) {
+  init(networkClient: any Service.NetworkClient) {
     self.networkClient = networkClient
   }
   

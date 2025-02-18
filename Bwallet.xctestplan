@@ -22,13 +22,6 @@
     {
       "target" : {
         "containerPath" : "container:Bwallet.xcodeproj",
-        "identifier" : "BF260B3D2D64A5C300C180C4",
-        "name" : "ServiceTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:Bwallet.xcodeproj",
         "identifier" : "BF4181CA2D6444F300332178",
         "name" : "DomainTests"
       }

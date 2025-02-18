@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF260B3F2D64A5C300C180C4 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF260B372D64A5C300C180C4 /* Service.framework */; };
 		BF260B4A2D64A5C300C180C4 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF260B372D64A5C300C180C4 /* Service.framework */; };
 		BF260B4B2D64A5C300C180C4 /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF260B372D64A5C300C180C4 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF260B542D64A5CE00C180C4 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; };
@@ -23,20 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BF260B402D64A5C300C180C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF4181892D64437300332178 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF260B362D64A5C300C180C4;
-			remoteInfo = Service;
-		};
-		BF260B422D64A5C300C180C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF4181892D64437300332178 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF4181902D64437300332178;
-			remoteInfo = Bwallet;
-		};
 		BF260B482D64A5C300C180C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF4181892D64437300332178 /* Project object */;
@@ -142,7 +127,6 @@
 
 /* Begin PBXFileReference section */
 		BF260B372D64A5C300C180C4 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF260B3E2D64A5C300C180C4 /* ServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4181912D64437300332178 /* Bwallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bwallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4181C42D6444F300332178 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4181CB2D6444F300332178 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,11 +168,6 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		BF260B442D64A5C300C180C4 /* ServiceTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ServiceTests;
-			sourceTree = "<group>";
-		};
 		BF4181932D64437300332178 /* Bwallet */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Bwallet;
@@ -228,14 +207,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF260B542D64A5CE00C180C4 /* Domain.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF260B3B2D64A5C300C180C4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF260B3F2D64A5C300C180C4 /* Service.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +262,6 @@
 				BF4181C52D6444F300332178 /* Domain */,
 				BF4181D12D6444F300332178 /* DomainTests */,
 				BF260B382D64A5C300C180C4 /* Service */,
-				BF260B442D64A5C300C180C4 /* ServiceTests */,
 				BFC092892D64F992005742C0 /* Dependency */,
 				BFC092952D64F992005742C0 /* DependencyTests */,
 				BF4182112D644FA600332178 /* Frameworks */,
@@ -306,7 +276,6 @@
 				BF4181C42D6444F300332178 /* Domain.framework */,
 				BF4181CB2D6444F300332178 /* DomainTests.xctest */,
 				BF260B372D64A5C300C180C4 /* Service.framework */,
-				BF260B3E2D64A5C300C180C4 /* ServiceTests.xctest */,
 				BFC092882D64F992005742C0 /* Dependency.framework */,
 				BFC0928F2D64F992005742C0 /* DependencyTests.xctest */,
 			);
@@ -371,30 +340,6 @@
 			productName = Service;
 			productReference = BF260B372D64A5C300C180C4 /* Service.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		BF260B3D2D64A5C300C180C4 /* ServiceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BF260B512D64A5C300C180C4 /* Build configuration list for PBXNativeTarget "ServiceTests" */;
-			buildPhases = (
-				BF260B3A2D64A5C300C180C4 /* Sources */,
-				BF260B3B2D64A5C300C180C4 /* Frameworks */,
-				BF260B3C2D64A5C300C180C4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BF260B412D64A5C300C180C4 /* PBXTargetDependency */,
-				BF260B432D64A5C300C180C4 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BF260B442D64A5C300C180C4 /* ServiceTests */,
-			);
-			name = ServiceTests;
-			packageProductDependencies = (
-			);
-			productName = ServiceTests;
-			productReference = BF260B3E2D64A5C300C180C4 /* ServiceTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		BF4181902D64437300332178 /* Bwallet */ = {
 			isa = PBXNativeTarget;
@@ -532,10 +477,6 @@
 						CreatedOnToolsVersion = 16.2;
 						LastSwiftMigration = 1620;
 					};
-					BF260B3D2D64A5C300C180C4 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = BF4181902D64437300332178;
-					};
 					BF4181902D64437300332178 = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -577,7 +518,6 @@
 				BF4181C32D6444F300332178 /* Domain */,
 				BF4181CA2D6444F300332178 /* DomainTests */,
 				BF260B362D64A5C300C180C4 /* Service */,
-				BF260B3D2D64A5C300C180C4 /* ServiceTests */,
 				BFC092872D64F992005742C0 /* Dependency */,
 				BFC0928E2D64F992005742C0 /* DependencyTests */,
 			);
@@ -586,13 +526,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		BF260B352D64A5C300C180C4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF260B3C2D64A5C300C180C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -644,13 +577,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF260B3A2D64A5C300C180C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BF41818D2D64437300332178 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -689,16 +615,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BF260B412D64A5C300C180C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF260B362D64A5C300C180C4 /* Service */;
-			targetProxy = BF260B402D64A5C300C180C4 /* PBXContainerItemProxy */;
-		};
-		BF260B432D64A5C300C180C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF4181902D64437300332178 /* Bwallet */;
-			targetProxy = BF260B422D64A5C300C180C4 /* PBXContainerItemProxy */;
-		};
 		BF260B492D64A5C300C180C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BF260B362D64A5C300C180C4 /* Service */;
@@ -834,52 +750,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				XROS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Release;
-		};
-		BF260B522D64A5C300C180C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 25WL36ABTN;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.ServiceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bwallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bwallet";
-				XROS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Debug;
-		};
-		BF260B532D64A5C300C180C4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 25WL36ABTN;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.ServiceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bwallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bwallet";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
@@ -1358,15 +1228,6 @@
 			buildConfigurations = (
 				BF260B4E2D64A5C300C180C4 /* Debug */,
 				BF260B4F2D64A5C300C180C4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BF260B512D64A5C300C180C4 /* Build configuration list for PBXNativeTarget "ServiceTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF260B522D64A5C300C180C4 /* Debug */,
-				BF260B532D64A5C300C180C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

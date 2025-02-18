@@ -10,9 +10,9 @@ import Domain
 import Service
 
 final class PortfolioService: Service.PortfolioService {
-  let networkClient: NetworkClient
+  var networkClient: any Service.NetworkClient
   
-  init(networkClient: NetworkClient) {
+  init(networkClient: any Service.NetworkClient) {
     self.networkClient = networkClient
   }
   
