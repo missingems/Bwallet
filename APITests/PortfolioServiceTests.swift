@@ -12,7 +12,7 @@ import Testing
 import Combine
 
 struct PortfolioServiceTests {
-  private let service = PreviewPortfolioService(networkClient: NetworkClient(environment: .preview))
+  private let service = PortfolioService(networkClient: NetworkClient(environment: .preview))
   private var cancellables = Set<AnyCancellable>()
   
   @Test mutating func testGetAllAssets_success() async throws {

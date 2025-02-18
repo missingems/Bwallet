@@ -24,6 +24,7 @@
 		BFC092712D64E4CC005742C0 /* CurrencyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC092702D64E4C9005742C0 /* CurrencyAPI.swift */; };
 		BFC092732D64EB0A005742C0 /* PortfolioAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC092722D64EB08005742C0 /* PortfolioAPI.swift */; };
 		BFC092752D64EB17005742C0 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC092742D64EB16005742C0 /* Bundle.swift */; };
+		BFC0927F2D64EF1B005742C0 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC0927E2D64EF19005742C0 /* DashboardService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		BFC092702D64E4C9005742C0 /* CurrencyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAPI.swift; sourceTree = "<group>"; };
 		BFC092722D64EB08005742C0 /* PortfolioAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAPI.swift; sourceTree = "<group>"; };
 		BFC092742D64EB16005742C0 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		BFC0927E2D64EF19005742C0 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -269,6 +271,7 @@
 		BF260B8D2D64B73500C180C4 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				BFC0927E2D64EF19005742C0 /* DashboardService.swift */,
 				BFC092742D64EB16005742C0 /* Bundle.swift */,
 				BFC092722D64EB08005742C0 /* PortfolioAPI.swift */,
 				BFC092702D64E4C9005742C0 /* CurrencyAPI.swift */,
@@ -654,6 +657,7 @@
 				BFC092732D64EB0A005742C0 /* PortfolioAPI.swift in Sources */,
 				BFC092712D64E4CC005742C0 /* CurrencyAPI.swift in Sources */,
 				BFC092752D64EB17005742C0 /* Bundle.swift in Sources */,
+				BFC0927F2D64EF1B005742C0 /* DashboardService.swift in Sources */,
 				BF260B8E2D64B73500C180C4 /* CurrencyService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

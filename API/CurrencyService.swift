@@ -1,5 +1,5 @@
 //
-//  PreviewCurrencyService.swift
+//  CurrencyService.swift
 //  Bwallet
 //
 //  Created by Jun on 18/2/25.
@@ -9,7 +9,7 @@ import Combine
 import Domain
 import Service
 
-final class PreviewCurrencyService: Service.CurrencyService {
+final class CurrencyService: Service.CurrencyService {
   let networkClient: NetworkClient
   
   init(networkClient: NetworkClient) {

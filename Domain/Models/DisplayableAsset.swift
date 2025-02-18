@@ -5,7 +5,7 @@
 //  Created by Jun on 18/2/25.
 //
 
-public enum DisplayableAsset: Identifiable, Sendable {
+public enum DisplayableAsset: Identifiable, Sendable, Equatable {
   case content(
     cryptoName: String,
     cryptoSymbol: String,

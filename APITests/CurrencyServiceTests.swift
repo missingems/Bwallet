@@ -12,7 +12,7 @@ import Testing
 import Combine
 
 struct CurrencyServiceTests {
-  private let service = PreviewCurrencyService(
+  private let service = CurrencyService(
     networkClient: NetworkClient(environment: .preview)
   )
   

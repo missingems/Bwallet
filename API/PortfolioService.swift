@@ -1,5 +1,5 @@
 //
-//  PreviewPortfolioService.swift
+//  PortfolioService.swift
 //  Bwallet
 //
 //  Created by Jun on 18/2/25.
@@ -9,7 +9,7 @@ import Combine
 import Domain
 import Service
 
-final class PreviewPortfolioService: Service.PortfolioService {
+final class PortfolioService: Service.PortfolioService {
   let networkClient: NetworkClient
   
   init(networkClient: NetworkClient) {
