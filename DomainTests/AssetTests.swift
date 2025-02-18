@@ -9,7 +9,7 @@ import Testing
 @testable import Domain
 
 struct AssetTests {
-  @Test func testDecodingSuccess() throws {
+  @Test func testDecoding_success() throws {
     let jsonData = try #require(
         """
         [
@@ -85,7 +85,7 @@ struct AssetTests {
     #expect(givenAssets == expectedAssets)
   }
   
-  @Test func testDecodingFailure() throws {
+  @Test func testDecoding_failure() throws {
     let malformedJsonData = try #require(
         """
         [

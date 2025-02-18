@@ -9,12 +9,12 @@ import Domain
 import Combine
 
 public enum CurrencyError: Error, Equatable {
-  case networkError
-  case dataError
   case internalError(String)
 }
 
 public protocol CurrencyService {
+  var networkClient: NetworkClient { get }
+  
   func getCryptoCurrencyToFiatCurrencyRates(
     with fiatCurrency: ID<Fiat>
   ) -> AnyPublisher<[CryptoFiatPair], CurrencyError>

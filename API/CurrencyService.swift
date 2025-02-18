@@ -1,5 +1,5 @@
 //
-//  CurrencyService.swift
+//  PreviewCurrencyService.swift
 //  Bwallet
 //
 //  Created by Jun on 18/2/25.
@@ -10,41 +10,24 @@ import Domain
 import Service
 
 final class PreviewCurrencyService: Service.CurrencyService {
-  enum PreviewableCurrency {
-    case hkd
-    case usd
-    
-    init?(_ id: ID<Fiat>) {
-      switch id.rawValue.uppercased() {
-      case "HKD":
-        self = .hkd
-        
-      case "USD":
-        self = .usd
-        
-      default:
-        return nil
-      }
-    }
+  let networkClient: NetworkClient
+  
+  init(networkClient: NetworkClient) {
+    self.networkClient = networkClient
   }
   
   func getCryptoCurrencyToFiatCurrencyRates(
     with fiatCurrency: ID<Fiat>
   ) -> AnyPublisher<[CryptoFiatPair], CurrencyError> {
-    Future<[CryptoFiatPair], CurrencyError> { promise in
-      guard let previewableCurrency = PreviewableCurrency(fiatCurrency) else {
-        promise(.failure(.internalError("Unsupported fiat currency")))
-        return
-      }
-      
-      switch previewableCurrency {
-      case .hkd:
-        try? promise(.success(JSONReader.load("HKDConversionRate")))
-        
-      case .usd:
-        try? promise(.success(JSONReader.load("USDConversionRate")))
-      }
+    guard let router = CurrencyAPI(fiat: fiatCurrency) else {
+      return Fail(error: CurrencyError.internalError("Unsupported fiat currency"))
+        .eraseToAnyPublisher()
     }
-    .eraseToAnyPublisher()
+    
+    return networkClient.request(router)
+      .mapError { error in
+        return CurrencyError.internalError(error.localizedDescription)
+      }
+      .eraseToAnyPublisher()
   }
 }

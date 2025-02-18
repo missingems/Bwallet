@@ -12,7 +12,10 @@ import Testing
 import Combine
 
 struct CurrencyServiceTests {
-  private let service = PreviewCurrencyService()
+  private let service = PreviewCurrencyService(
+    networkClient: NetworkClient(environment: .preview)
+  )
+  
   private var cancellables = Set<AnyCancellable>()
   
   @Test mutating func testGetCryptoCurrencyToHKDCurrencyRates_success() async throws {
@@ -192,4 +195,3 @@ struct CurrencyServiceTests {
     #expect(given == expected)
   }
 }
-

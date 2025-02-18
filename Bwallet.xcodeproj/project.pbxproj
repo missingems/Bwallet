@@ -19,8 +19,11 @@
 		BF260B842D64ABD100C180C4 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF260B8E2D64B73500C180C4 /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF260B8C2D64B73500C180C4 /* CurrencyService.swift */; };
 		BF260B8F2D64B73500C180C4 /* API.h in Headers */ = {isa = PBXBuildFile; fileRef = BF260B8B2D64B73500C180C4 /* API.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF260B982D64B8BE00C180C4 /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF260B972D64B8BB00C180C4 /* JSONReader.swift */; };
 		BF4181CC2D6444F300332178 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; };
+		BFC092642D64D7ED005742C0 /* PortfolioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC092632D64D7E9005742C0 /* PortfolioService.swift */; };
+		BFC092712D64E4CC005742C0 /* CurrencyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC092702D64E4C9005742C0 /* CurrencyAPI.swift */; };
+		BFC092732D64EB0A005742C0 /* PortfolioAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC092722D64EB08005742C0 /* PortfolioAPI.swift */; };
+		BFC092752D64EB17005742C0 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC092742D64EB16005742C0 /* Bundle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,10 +136,13 @@
 		BF260B6B2D64AA0D00C180C4 /* APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF260B8B2D64B73500C180C4 /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		BF260B8C2D64B73500C180C4 /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
-		BF260B972D64B8BB00C180C4 /* JSONReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONReader.swift; sourceTree = "<group>"; };
 		BF4181912D64437300332178 /* Bwallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bwallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4181C42D6444F300332178 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4181CB2D6444F300332178 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC092632D64D7E9005742C0 /* PortfolioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioService.swift; sourceTree = "<group>"; };
+		BFC092702D64E4C9005742C0 /* CurrencyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAPI.swift; sourceTree = "<group>"; };
+		BFC092722D64EB08005742C0 /* PortfolioAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAPI.swift; sourceTree = "<group>"; };
+		BFC092742D64EB16005742C0 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -263,10 +269,13 @@
 		BF260B8D2D64B73500C180C4 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				BF260B972D64B8BB00C180C4 /* JSONReader.swift */,
-				BF260B902D64B73900C180C4 /* TestData */,
+				BFC092742D64EB16005742C0 /* Bundle.swift */,
+				BFC092722D64EB08005742C0 /* PortfolioAPI.swift */,
+				BFC092702D64E4C9005742C0 /* CurrencyAPI.swift */,
 				BF260B8B2D64B73500C180C4 /* API.h */,
 				BF260B8C2D64B73500C180C4 /* CurrencyService.swift */,
+				BFC092632D64D7E9005742C0 /* PortfolioService.swift */,
+				BF260B902D64B73900C180C4 /* TestData */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -641,7 +650,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF260B982D64B8BE00C180C4 /* JSONReader.swift in Sources */,
+				BFC092642D64D7ED005742C0 /* PortfolioService.swift in Sources */,
+				BFC092732D64EB0A005742C0 /* PortfolioAPI.swift in Sources */,
+				BFC092712D64E4CC005742C0 /* CurrencyAPI.swift in Sources */,
+				BFC092752D64EB17005742C0 /* Bundle.swift in Sources */,
 				BF260B8E2D64B73500C180C4 /* CurrencyService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
