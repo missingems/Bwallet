@@ -5,10 +5,10 @@
 //  Created by Jun on 18/2/25.
 //
 
-public struct CoinFiatPair: Decodable, Identifiable, Equatable {
-  public let coinSymbol: ID<Coin>
+public struct CryptoFiatPair: Decodable, Identifiable, Equatable, Sendable {
+  public let coinSymbol: ID<Crypto>
   public let fiatSymbol: ID<Fiat>
-  public let id: ID<CoinFiatPair>
+  public let id: ID<CryptoFiatPair>
   public let rate: Decimal
   
   public init(from decoder: Decoder) throws {
@@ -31,9 +31,9 @@ public struct CoinFiatPair: Decodable, Identifiable, Equatable {
   }
   
   public init(
-    coinSymbol: ID<Coin>,
+    coinSymbol: ID<Crypto>,
     fiatSymbol: ID<Fiat>,
-    id: ID<CoinFiatPair>,
+    id: ID<CryptoFiatPair>,
     rate: Decimal
   ) {
     self.coinSymbol = coinSymbol
@@ -43,7 +43,7 @@ public struct CoinFiatPair: Decodable, Identifiable, Equatable {
   }
 }
 
-extension CoinFiatPair {
+extension CryptoFiatPair {
   enum CodingKeys: String, CodingKey {
     case coinSymbol = "symbol"
     case fiatSymbol

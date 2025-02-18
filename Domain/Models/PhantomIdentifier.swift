@@ -5,7 +5,7 @@
 //  Created by Jun on 18/2/25.
 //
 
-public struct ID<PhantomType>: Hashable, Decodable, RawRepresentable, Equatable {
+public struct ID<PhantomType>: Hashable, Decodable, RawRepresentable, Equatable, Sendable {
   public var rawValue: String {
     id
   }

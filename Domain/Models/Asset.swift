@@ -5,9 +5,9 @@
 //  Created by Jun on 18/2/25.
 //
 
-public struct Asset: Decodable, Identifiable, Equatable {
+public struct Asset: Decodable, Identifiable, Equatable, Sendable {
   public let amount: Decimal
-  public let coin: Coin
+  public let coin: Crypto
   public let id: ID<Asset>
   
   public init(from decoder: Decoder) throws {
@@ -16,13 +16,13 @@ public struct Asset: Decodable, Identifiable, Equatable {
     id = ID(rawValue: String(try container.decode(Int.self, forKey: .id)))
     
     let name = try container.decode(String.self, forKey: .name)
-    coin = Coin(name: name, symbol: .init(rawValue: String(try container.decode(String.self, forKey: .symbol))))
+    coin = Crypto(name: name, symbol: .init(rawValue: String(try container.decode(String.self, forKey: .symbol))))
   }
   
   public init(
     id: ID<Asset>,
     amount: Decimal,
-    coin: Coin
+    coin: Crypto
   ) {
     self.id = id
     self.amount = amount
