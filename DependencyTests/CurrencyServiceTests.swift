@@ -8,7 +8,7 @@
 @testable import Domain
 import Testing
 @testable import Service
-@testable import API
+@testable import Dependency
 import Combine
 
 struct CurrencyServiceTests {

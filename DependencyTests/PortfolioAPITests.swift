@@ -6,7 +6,7 @@
 //
 
 import Testing
-@testable import API
+@testable import Dependency
 
 struct PortfolioAPITests {
   @Test func testPortfolioAPI_getAllAssets() {

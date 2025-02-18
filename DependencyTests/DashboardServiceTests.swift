@@ -9,7 +9,7 @@ import Testing
 import Combine
 @testable import Domain
 @testable import Service
-@testable import API
+@testable import Dependency
 
 struct DashboardServiceTests {
   var cancellables: Set<AnyCancellable> = []

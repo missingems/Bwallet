@@ -6,22 +6,6 @@
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES"
       buildArchitectures = "Automatic">
-      <BuildActionEntries>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BF260B632D64AA0D00C180C4"
-               BuildableName = "API.framework"
-               BlueprintName = "API"
-               ReferencedContainer = "container:Bwallet.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -35,9 +19,9 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BF260B6A2D64AA0D00C180C4"
-               BuildableName = "APITests.xctest"
-               BlueprintName = "APITests"
+               BlueprintIdentifier = "BFC0928E2D64F992005742C0"
+               BuildableName = "DependencyTests.xctest"
+               BlueprintName = "DependencyTests"
                ReferencedContainer = "container:Bwallet.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -60,15 +44,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BF260B632D64AA0D00C180C4"
-            BuildableName = "API.framework"
-            BlueprintName = "API"
-            ReferencedContainer = "container:Bwallet.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

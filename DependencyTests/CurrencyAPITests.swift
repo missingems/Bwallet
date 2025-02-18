@@ -6,7 +6,7 @@
 //
 
 import Testing
-@testable import API
+@testable import Dependency
 
 struct CurrencyAPITests {
   @Test func testCurrencyAPI_getCryptoToUSDCurrencyRates() {
