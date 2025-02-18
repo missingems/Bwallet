@@ -20,9 +20,9 @@ public struct CoinFiatPair: Decodable, Identifiable {
   
   public init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
-    coinSymbol = try .init(id: container.decode(String.self, forKey: .coinSymbol))
-    fiatSymbol = try .init(id: container.decode(String.self, forKey: .fiatSymbol))
-    id = try ID(id: String(container.decode(Int.self, forKey: .id)))
+    coinSymbol = try .init(rawValue: container.decode(String.self, forKey: .coinSymbol))
+    fiatSymbol = try .init(rawValue: container.decode(String.self, forKey: .fiatSymbol))
+    id = try ID(rawValue: String(container.decode(Int.self, forKey: .id)))
     rate = try container.decode(String.self, forKey: .rate)
   }
 }
