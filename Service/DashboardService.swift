@@ -15,5 +15,5 @@ public enum DashboardServiceError: Error, Equatable {
 public protocol DashboardService {
   var currencyService: CurrencyService { get }
   var portfolioService: PortfolioService { get }
-  func getAllDisplayableAssets(with fiat: ID<Fiat>) -> AnyPublisher<[Domain.DisplayableAsset], DashboardServiceError>
+  func getAllDisplayableAssets(with fiat: Fiat) -> AnyPublisher<Dashboard, DashboardServiceError>
 }

@@ -21,15 +21,15 @@ final class DashboardService: Service.DashboardService {
     self.currencyService = currencyService
   }
   
-  func getAllDisplayableAssets(with fiat: ID<Fiat>) -> AnyPublisher<[Domain.DisplayableAsset], DashboardServiceError> {
+  func getAllDisplayableAssets(with fiat: Fiat) -> AnyPublisher<Dashboard, DashboardServiceError> {
     let assetsPublisher = portfolioService.getAllAssets()
       .mapError { DashboardServiceError.internalError($0.localizedDescription) }
-    let ratesPublisher = currencyService.getCryptoCurrencyToFiatCurrencyRates(with: fiat)
+    let ratesPublisher = currencyService.getCryptoCurrencyToFiatCurrencyRates(with: fiat.symbol)
       .mapError { DashboardServiceError.internalError($0.localizedDescription) }
     
     return Publishers.CombineLatest(assetsPublisher, ratesPublisher)
       .map { assets, rates in
-        return assets.compactMap { asset in
+        let assets: [DisplayableAsset] = assets.compactMap { asset in
           guard let matchingPair = rates.first(where: { rate in
             rate.cryptoSymbol == asset.crypto.symbol
           }) else {
@@ -39,11 +39,15 @@ final class DashboardService: Service.DashboardService {
           return DisplayableAsset.content(
             cryptoName: asset.crypto.name,
             cryptoSymbol: asset.crypto.symbol.rawValue,
-            balance: "\(asset.amount)",
-            fiatBalance: "\(asset.amount * matchingPair.rate)",
+            balance: asset.amount,
+            fiatBalance: asset.amount * matchingPair.rate,
             id: asset.crypto.symbol
           )
         }
+        
+        let totalBalance = assets.map { $0.fiatBalance }.reduce(0, +)
+        
+        return Dashboard(totalBalance: totalBalance, fiatCurrency: fiat, displayableAssets: assets)
       }
       .eraseToAnyPublisher()
   }

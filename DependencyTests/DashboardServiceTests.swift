@@ -20,10 +20,10 @@ struct DashboardServiceTests {
       currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
     )
     
-    var result: Result<[DisplayableAsset], DashboardServiceError>?
+    var result: Result<Dashboard, DashboardServiceError>?
     
     await confirmation { confirmation in
-      service.getAllDisplayableAssets(with: ID(rawValue: "HKD")).sink { completion in
+      service.getAllDisplayableAssets(with: Fiat(symbol: ID(rawValue: "HKD"))).sink { completion in
         switch completion {
         case let .failure(error):
           result = .failure(error)
@@ -40,57 +40,63 @@ struct DashboardServiceTests {
     }
     
     let given = try result?.get()
-    let expected: [DisplayableAsset] = [
+    let expectedAssets: [DisplayableAsset] = try [
       .content(
         cryptoName: "bitcoin",
         cryptoSymbol: "BTC",
-        balance: "2.1",
-        fiatBalance: "99603",
+        balance: #require(Decimal(string: "2.1")),
+        fiatBalance: #require(Decimal(string: "99603")),
         id: ID(rawValue: "BTC")
       ),
       .content(
         cryptoName: "ethereum",
         cryptoSymbol: "ETH",
-        balance: "10.8",
-        fiatBalance: "281880",
+        balance: #require(Decimal(string: "10.8")),
+        fiatBalance: #require(Decimal(string: "281880")),
         id: ID(rawValue: "ETH")
       ),
       .content(
         cryptoName: "cronos",
         cryptoSymbol: "CRO",
-        balance: "12345",
-        fiatBalance: "8641.5",
+        balance: #require(Decimal(string: "12345")),
+        fiatBalance: #require(Decimal(string: "8641.5")),
         id: ID(rawValue: "CRO")
       ),
       .content(
         cryptoName: "solana",
         cryptoSymbol: "SOL",
-        balance: "98",
-        fiatBalance: "102214",
+        balance: #require(Decimal(string: "98")),
+        fiatBalance: #require(Decimal(string: "102214")),
         id: ID(rawValue: "SOL")
       ),
       .content(
         cryptoName: "polygon",
         cryptoSymbol: "MATIC",
-        balance: "0.9",
-        fiatBalance: "3.996",
+        balance: #require(Decimal(string: "0.9")),
+        fiatBalance: #require(Decimal(string: "3.996")),
         id: ID(rawValue: "MATIC")
       ),
       .content(
         cryptoName: "cosmos",
         cryptoSymbol: "ATOM",
-        balance: "100",
-        fiatBalance: "5414",
+        balance: #require(Decimal(string: "100")),
+        fiatBalance: #require(Decimal(string: "5414")),
         id: ID(rawValue: "ATOM")
       ),
       .content(
         cryptoName: "dogecoin",
         cryptoSymbol: "DOGE",
-        balance: "1000000000000000000000000",
-        fiatBalance: "950000000000000000000000",
+        balance: #require(Decimal(string: "1000000000000000000000000")),
+        fiatBalance: #require(Decimal(string: "950000000000000000000000")),
         id: ID(rawValue: "DOGE")
       )
     ]
+    
+    let expected = try Dashboard(
+      totalBalance: #require(Decimal(string: "950000000000000000497756.496")),
+      fiatCurrency: Fiat(symbol: ID(rawValue: "HKD")),
+      displayableAssets: expectedAssets
+    )
     
     #expect(given == expected)
   }
@@ -101,15 +107,14 @@ struct DashboardServiceTests {
       currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
     )
     
-    var result: Result<[DisplayableAsset], DashboardServiceError>?
+    var result: Result<Dashboard, DashboardServiceError>?
     
-    await confirmation { confirmation in
-      service.getAllDisplayableAssets(with: ID(rawValue: "USD")).sink { completion in
+    try await confirmation { confirmation in
+      service.getAllDisplayableAssets(with: Fiat(symbol: ID(rawValue: "USD"))).sink { completion in
         switch completion {
         case let .failure(error):
           result = .failure(error)
           confirmation.confirm()
-          
         case .finished:
           break
         }
@@ -118,74 +123,81 @@ struct DashboardServiceTests {
         confirmation.confirm()
       }
       .store(in: &cancellables)
-    }
-    
-    let given = try result?.get()
-    let expected: [DisplayableAsset] = [
-      .content(
-        cryptoName: "bitcoin",
-        cryptoSymbol: "BTC",
-        balance: "2.1",
-        fiatBalance: "126000",
-        id: ID(rawValue: "BTC")
-      ),
-      .content(
-        cryptoName: "ethereum",
-        cryptoSymbol: "ETH",
-        balance: "10.8",
-        fiatBalance: "36180",
-        id: ID(rawValue: "ETH")
-      ),
-      .content(
-        cryptoName: "cronos",
-        cryptoSymbol: "CRO",
-        balance: "12345",
-        fiatBalance: "1111.05",
-        id: ID(rawValue: "CRO")
-      ),
-      .content(
-        cryptoName: "solana",
-        cryptoSymbol: "SOL",
-        balance: "98",
-        fiatBalance: "13034",
-        id: ID(rawValue: "SOL")
-      ),
-      .content(
-        cryptoName: "polygon",
-        cryptoSymbol: "MATIC",
-        balance: "0.9",
-        fiatBalance: "0.504",
-        id: ID(rawValue: "MATIC")
-      ),
-      .content(
-        cryptoName: "cosmos",
-        cryptoSymbol: "ATOM",
-        balance: "100",
-        fiatBalance: "694",
-        id: ID(rawValue: "ATOM")
-      ),
-      .content(
-        cryptoName: "dogecoin",
-        cryptoSymbol: "DOGE",
-        balance: "1000000000000000000000000",
-        fiatBalance: "120000000000000000000000",
-        id: ID(rawValue: "DOGE")
+      
+      let given = try result?.get()
+      
+      let expectedAssets: [DisplayableAsset] = try [
+        .content(
+          cryptoName: "bitcoin",
+          cryptoSymbol: "BTC",
+          balance: #require(Decimal(string: "2.1")),
+          fiatBalance: #require(Decimal(string: "126000")),
+          id: ID(rawValue: "BTC")
+        ),
+        .content(
+          cryptoName: "ethereum",
+          cryptoSymbol: "ETH",
+          balance: #require(Decimal(string: "10.8")),
+          fiatBalance: #require(Decimal(string: "36180")),
+          id: ID(rawValue: "ETH")
+        ),
+        .content(
+          cryptoName: "cronos",
+          cryptoSymbol: "CRO",
+          balance: #require(Decimal(string: "12345")),
+          fiatBalance: #require(Decimal(string: "1111.05")),
+          id: ID(rawValue: "CRO")
+        ),
+        .content(
+          cryptoName: "solana",
+          cryptoSymbol: "SOL",
+          balance: #require(Decimal(string: "98")),
+          fiatBalance: #require(Decimal(string: "13034")),
+          id: ID(rawValue: "SOL")
+        ),
+        .content(
+          cryptoName: "polygon",
+          cryptoSymbol: "MATIC",
+          balance: #require(Decimal(string: "0.9")),
+          fiatBalance: #require(Decimal(string: "0.504")),
+          id: ID(rawValue: "MATIC")
+        ),
+        .content(
+          cryptoName: "cosmos",
+          cryptoSymbol: "ATOM",
+          balance: #require(Decimal(string: "100")),
+          fiatBalance: #require(Decimal(string: "694")),
+          id: ID(rawValue: "ATOM")
+        ),
+        .content(
+          cryptoName: "dogecoin",
+          cryptoSymbol: "DOGE",
+          balance: #require(Decimal(string: "1000000000000000000000000")),
+          fiatBalance: #require(Decimal(string: "120000000000000000000000")),
+          id: ID(rawValue: "DOGE")
+        )
+      ]
+      
+      let expected = try Dashboard(
+        totalBalance: #require(Decimal(string: "120000000000000000177019.554")),
+        fiatCurrency: Fiat(symbol: ID(rawValue: "USD")),
+        displayableAssets: expectedAssets
       )
-    ]
-    
-    #expect(given == expected)
+      
+      #expect(given == expected)
+    }
   }
-  
+
   @Test mutating func testDashboardService_getDisplayableAssetsWithUnsupportedCurrency_shouldReceiveError() async throws {
     let service = DashboardService(
       portfolioService: PortfolioService(networkClient: NetworkClient(environment: .preview)),
       currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
     )
     
-    var result: Result<[DisplayableAsset], DashboardServiceError>?
+    var result: Result<Dashboard, DashboardServiceError>?
     
     await confirmation { confirmation in
-      service.getAllDisplayableAssets(with: ID(rawValue: "SGD")).sink { completion in
+      service.getAllDisplayableAssets(with: Fiat(symbol: ID(rawValue: "SGD"))).sink { completion in
         switch completion {
         case let .failure(error):
           result = .failure(error)

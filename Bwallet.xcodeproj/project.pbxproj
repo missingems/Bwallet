@@ -148,6 +148,7 @@
 		BF4181CB2D6444F300332178 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC092882D64F992005742C0 /* Dependency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dependency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC0928F2D64F992005742C0 /* DependencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DependencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC092C92D650069005742C0 /* Bwallet.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Bwallet.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -285,6 +286,7 @@
 		BF4181882D64437300332178 = {
 			isa = PBXGroup;
 			children = (
+				BFC092C92D650069005742C0 /* Bwallet.xctestplan */,
 				BF4181932D64437300332178 /* Bwallet */,
 				BF4181C52D6444F300332178 /* Domain */,
 				BF4181D12D6444F300332178 /* DomainTests */,
