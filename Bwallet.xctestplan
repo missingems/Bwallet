@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "9E48A421-BA7F-433E-9078-F97383B7B4ED",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Bwallet.xcodeproj",
+        "identifier" : "BFC0928E2D64F992005742C0",
+        "name" : "DependencyTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Bwallet.xcodeproj",
+        "identifier" : "BF4181CA2D6444F300332178",
+        "name" : "DomainTests"
+      }
+    }
+  ],
+  "version" : 1
+}

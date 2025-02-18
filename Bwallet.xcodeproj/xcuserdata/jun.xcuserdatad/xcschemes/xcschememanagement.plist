@@ -9,19 +9,54 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Data.xcscheme_^#shared#^_</key>
+		<key>Dependency.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>5</integer>
+		</dict>
+		<key>DependencyTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>Domain.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>DomainTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Service.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>BF260B362D64A5C300C180C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF260B3D2D64A5C300C180C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF260B632D64AA0D00C180C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF260B6A2D64AA0D00C180C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BF4181902D64437300332178</key>
 		<dict>
 			<key>primary</key>
@@ -37,6 +72,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>BF4181C32D6444F300332178</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BF4181CA2D6444F300332178</key>
 		<dict>
 			<key>primary</key>
@@ -48,6 +88,11 @@
 			<true/>
 		</dict>
 		<key>BF4181FA2D644FA000332178</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BFC0928E2D64F992005742C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

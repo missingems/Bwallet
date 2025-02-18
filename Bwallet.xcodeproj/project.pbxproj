@@ -7,28 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF260B4A2D64A5C300C180C4 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF260B372D64A5C300C180C4 /* Service.framework */; };
+		BF260B4B2D64A5C300C180C4 /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF260B372D64A5C300C180C4 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF260B542D64A5CE00C180C4 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; };
+		BF260B552D64A5CE00C180C4 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF4181CC2D6444F300332178 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; };
-		BF4181FC2D644FA000332178 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181F42D644FA000332178 /* Data.framework */; };
-		BF4182072D644FA000332178 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181F42D644FA000332178 /* Data.framework */; };
-		BF4182082D644FA000332178 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181F42D644FA000332178 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BF4182122D644FA600332178 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; };
-		BF4182132D644FA600332178 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BFC092902D64F992005742C0 /* Dependency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC092882D64F992005742C0 /* Dependency.framework */; };
+		BFC0929B2D64F992005742C0 /* Dependency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC092882D64F992005742C0 /* Dependency.framework */; };
+		BFC0929C2D64F992005742C0 /* Dependency.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFC092882D64F992005742C0 /* Dependency.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BFC092BE2D64FA5D005742C0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; };
+		BFC092BF2D64FA5D005742C0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BFC092C22D64FA5D005742C0 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF260B372D64A5C300C180C4 /* Service.framework */; };
+		BFC092C32D64FA5D005742C0 /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF260B372D64A5C300C180C4 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BF4181A32D64437400332178 /* PBXContainerItemProxy */ = {
+		BF260B482D64A5C300C180C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF4181892D64437300332178 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BF4181902D64437300332178;
-			remoteInfo = Bwallet;
+			remoteGlobalIDString = BF260B362D64A5C300C180C4;
+			remoteInfo = Service;
 		};
-		BF4181AD2D64437400332178 /* PBXContainerItemProxy */ = {
+		BF260B562D64A5CE00C180C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF4181892D64437300332178 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BF4181902D64437300332178;
-			remoteInfo = Bwallet;
+			remoteGlobalIDString = BF4181C32D6444F300332178;
+			remoteInfo = Domain;
 		};
 		BF4181CD2D6444F300332178 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -44,45 +50,75 @@
 			remoteGlobalIDString = BF4181902D64437300332178;
 			remoteInfo = Bwallet;
 		};
-		BF4181FD2D644FA000332178 /* PBXContainerItemProxy */ = {
+		BFC092912D64F992005742C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF4181892D64437300332178 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BF4181F32D644FA000332178;
-			remoteInfo = Data;
+			remoteGlobalIDString = BFC092872D64F992005742C0;
+			remoteInfo = Dependency;
 		};
-		BF4181FF2D644FA000332178 /* PBXContainerItemProxy */ = {
+		BFC092932D64F992005742C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF4181892D64437300332178 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BF4181902D64437300332178;
 			remoteInfo = Bwallet;
 		};
-		BF4182052D644FA000332178 /* PBXContainerItemProxy */ = {
+		BFC092992D64F992005742C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF4181892D64437300332178 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BF4181F32D644FA000332178;
-			remoteInfo = Data;
+			remoteGlobalIDString = BFC092872D64F992005742C0;
+			remoteInfo = Dependency;
 		};
-		BF4182142D644FA600332178 /* PBXContainerItemProxy */ = {
+		BFC092C02D64FA5D005742C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF4181892D64437300332178 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BF4181C32D6444F300332178;
 			remoteInfo = Domain;
 		};
+		BFC092C42D64FA5D005742C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF4181892D64437300332178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF260B362D64A5C300C180C4;
+			remoteInfo = Service;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BF41820D2D644FA000332178 /* Embed Frameworks */ = {
+		BF260B502D64A5C300C180C4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BF4182132D644FA600332178 /* Domain.framework in Embed Frameworks */,
-				BF4182082D644FA000332178 /* Data.framework in Embed Frameworks */,
+				BF260B4B2D64A5C300C180C4 /* Service.framework in Embed Frameworks */,
+				BFC0929C2D64F992005742C0 /* Dependency.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF260B582D64A5CE00C180C4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BF260B552D64A5CE00C180C4 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC092C62D64FA5E005742C0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BFC092C32D64FA5D005742C0 /* Service.framework in Embed Frameworks */,
+				BFC092BF2D64FA5D005742C0 /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,16 +126,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF260B372D64A5C300C180C4 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4181912D64437300332178 /* Bwallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bwallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF4181A22D64437400332178 /* BwalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BwalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF4181AC2D64437400332178 /* BwalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BwalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4181C42D6444F300332178 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4181CB2D6444F300332178 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF4181F42D644FA000332178 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF4181FB2D644FA000332178 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC092882D64F992005742C0 /* Dependency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dependency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC0928F2D64F992005742C0 /* DependencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DependencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC092C92D650069005742C0 /* Bwallet.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Bwallet.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BF260B4C2D64A5C300C180C4 /* Exceptions for "Service" folder in "Service" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			publicHeaders = (
+				Service.h,
+			);
+			target = BF260B362D64A5C300C180C4 /* Service */;
+		};
 		BF4181D92D6444F300332178 /* Exceptions for "Domain" folder in "Domain" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			publicHeaders = (
@@ -107,29 +150,27 @@
 			);
 			target = BF4181C32D6444F300332178 /* Domain */;
 		};
-		BF41820C2D644FA000332178 /* Exceptions for "Data" folder in "Data" target */ = {
+		BFC0929D2D64F992005742C0 /* Exceptions for "Dependency" folder in "Dependency" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			publicHeaders = (
-				Data.h,
+				Dependency.h,
 			);
-			target = BF4181F32D644FA000332178 /* Data */;
+			target = BFC092872D64F992005742C0 /* Dependency */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		BF260B382D64A5C300C180C4 /* Service */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BF260B4C2D64A5C300C180C4 /* Exceptions for "Service" folder in "Service" target */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		BF4181932D64437300332178 /* Bwallet */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Bwallet;
-			sourceTree = "<group>";
-		};
-		BF4181A52D64437400332178 /* BwalletTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BwalletTests;
-			sourceTree = "<group>";
-		};
-		BF4181AF2D64437400332178 /* BwalletUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BwalletUITests;
 			sourceTree = "<group>";
 		};
 		BF4181C52D6444F300332178 /* Domain */ = {
@@ -145,42 +186,36 @@
 			path = DomainTests;
 			sourceTree = "<group>";
 		};
-		BF4181F52D644FA000332178 /* Data */ = {
+		BFC092892D64F992005742C0 /* Dependency */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				BF41820C2D644FA000332178 /* Exceptions for "Data" folder in "Data" target */,
+				BFC0929D2D64F992005742C0 /* Exceptions for "Dependency" folder in "Dependency" target */,
 			);
-			path = Data;
+			path = Dependency;
 			sourceTree = "<group>";
 		};
-		BF4182012D644FA000332178 /* DataTests */ = {
+		BFC092952D64F992005742C0 /* DependencyTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DataTests;
+			path = DependencyTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BF260B342D64A5C300C180C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF260B542D64A5CE00C180C4 /* Domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF41818E2D64437300332178 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF4182122D644FA600332178 /* Domain.framework in Frameworks */,
-				BF4182072D644FA000332178 /* Data.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF41819F2D64437400332178 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF4181A92D64437400332178 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				BF260B4A2D64A5C300C180C4 /* Service.framework in Frameworks */,
+				BFC0929B2D64F992005742C0 /* Dependency.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,18 +234,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF4181F12D644FA000332178 /* Frameworks */ = {
+		BFC092852D64F992005742C0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC092C22D64FA5D005742C0 /* Service.framework in Frameworks */,
+				BFC092BE2D64FA5D005742C0 /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF4181F82D644FA000332178 /* Frameworks */ = {
+		BFC0928C2D64F992005742C0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF4181FC2D644FA000332178 /* Data.framework in Frameworks */,
+				BFC092902D64F992005742C0 /* Dependency.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,13 +257,13 @@
 		BF4181882D64437300332178 = {
 			isa = PBXGroup;
 			children = (
+				BFC092C92D650069005742C0 /* Bwallet.xctestplan */,
 				BF4181932D64437300332178 /* Bwallet */,
-				BF4181A52D64437400332178 /* BwalletTests */,
-				BF4181AF2D64437400332178 /* BwalletUITests */,
 				BF4181C52D6444F300332178 /* Domain */,
 				BF4181D12D6444F300332178 /* DomainTests */,
-				BF4181F52D644FA000332178 /* Data */,
-				BF4182012D644FA000332178 /* DataTests */,
+				BF260B382D64A5C300C180C4 /* Service */,
+				BFC092892D64F992005742C0 /* Dependency */,
+				BFC092952D64F992005742C0 /* DependencyTests */,
 				BF4182112D644FA600332178 /* Frameworks */,
 				BF4181922D64437300332178 /* Products */,
 			);
@@ -236,12 +273,11 @@
 			isa = PBXGroup;
 			children = (
 				BF4181912D64437300332178 /* Bwallet.app */,
-				BF4181A22D64437400332178 /* BwalletTests.xctest */,
-				BF4181AC2D64437400332178 /* BwalletUITests.xctest */,
 				BF4181C42D6444F300332178 /* Domain.framework */,
 				BF4181CB2D6444F300332178 /* DomainTests.xctest */,
-				BF4181F42D644FA000332178 /* Data.framework */,
-				BF4181FB2D644FA000332178 /* DataTests.xctest */,
+				BF260B372D64A5C300C180C4 /* Service.framework */,
+				BFC092882D64F992005742C0 /* Dependency.framework */,
+				BFC0928F2D64F992005742C0 /* DependencyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -256,6 +292,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		BF260B322D64A5C300C180C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF4181BF2D6444F300332178 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,7 +306,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF4181EF2D644FA000332178 /* Headers */ = {
+		BFC092832D64F992005742C0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,6 +316,31 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		BF260B362D64A5C300C180C4 /* Service */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF260B4D2D64A5C300C180C4 /* Build configuration list for PBXNativeTarget "Service" */;
+			buildPhases = (
+				BF260B322D64A5C300C180C4 /* Headers */,
+				BF260B332D64A5C300C180C4 /* Sources */,
+				BF260B342D64A5C300C180C4 /* Frameworks */,
+				BF260B352D64A5C300C180C4 /* Resources */,
+				BF260B582D64A5CE00C180C4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF260B572D64A5CE00C180C4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BF260B382D64A5C300C180C4 /* Service */,
+			);
+			name = Service;
+			packageProductDependencies = (
+			);
+			productName = Service;
+			productReference = BF260B372D64A5C300C180C4 /* Service.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		BF4181902D64437300332178 /* Bwallet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF4181B62D64437400332178 /* Build configuration list for PBXNativeTarget "Bwallet" */;
@@ -280,13 +348,13 @@
 				BF41818D2D64437300332178 /* Sources */,
 				BF41818E2D64437300332178 /* Frameworks */,
 				BF41818F2D64437300332178 /* Resources */,
-				BF41820D2D644FA000332178 /* Embed Frameworks */,
+				BF260B502D64A5C300C180C4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BF4182062D644FA000332178 /* PBXTargetDependency */,
-				BF4182152D644FA600332178 /* PBXTargetDependency */,
+				BF260B492D64A5C300C180C4 /* PBXTargetDependency */,
+				BFC0929A2D64F992005742C0 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				BF4181932D64437300332178 /* Bwallet */,
@@ -297,52 +365,6 @@
 			productName = Bwallet;
 			productReference = BF4181912D64437300332178 /* Bwallet.app */;
 			productType = "com.apple.product-type.application";
-		};
-		BF4181A12D64437400332178 /* BwalletTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BF4181B92D64437400332178 /* Build configuration list for PBXNativeTarget "BwalletTests" */;
-			buildPhases = (
-				BF41819E2D64437400332178 /* Sources */,
-				BF41819F2D64437400332178 /* Frameworks */,
-				BF4181A02D64437400332178 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BF4181A42D64437400332178 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BF4181A52D64437400332178 /* BwalletTests */,
-			);
-			name = BwalletTests;
-			packageProductDependencies = (
-			);
-			productName = BwalletTests;
-			productReference = BF4181A22D64437400332178 /* BwalletTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BF4181AB2D64437400332178 /* BwalletUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BF4181BC2D64437400332178 /* Build configuration list for PBXNativeTarget "BwalletUITests" */;
-			buildPhases = (
-				BF4181A82D64437400332178 /* Sources */,
-				BF4181A92D64437400332178 /* Frameworks */,
-				BF4181AA2D64437400332178 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BF4181AE2D64437400332178 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BF4181AF2D64437400332178 /* BwalletUITests */,
-			);
-			name = BwalletUITests;
-			packageProductDependencies = (
-			);
-			productName = BwalletUITests;
-			productReference = BF4181AC2D64437400332178 /* BwalletUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		BF4181C32D6444F300332178 /* Domain */ = {
 			isa = PBXNativeTarget;
@@ -391,51 +413,54 @@
 			productReference = BF4181CB2D6444F300332178 /* DomainTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BF4181F32D644FA000332178 /* Data */ = {
+		BFC092872D64F992005742C0 /* Dependency */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF4182092D644FA000332178 /* Build configuration list for PBXNativeTarget "Data" */;
+			buildConfigurationList = BFC0929E2D64F992005742C0 /* Build configuration list for PBXNativeTarget "Dependency" */;
 			buildPhases = (
-				BF4181EF2D644FA000332178 /* Headers */,
-				BF4181F02D644FA000332178 /* Sources */,
-				BF4181F12D644FA000332178 /* Frameworks */,
-				BF4181F22D644FA000332178 /* Resources */,
+				BFC092832D64F992005742C0 /* Headers */,
+				BFC092842D64F992005742C0 /* Sources */,
+				BFC092852D64F992005742C0 /* Frameworks */,
+				BFC092862D64F992005742C0 /* Resources */,
+				BFC092C62D64FA5E005742C0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BFC092C12D64FA5D005742C0 /* PBXTargetDependency */,
+				BFC092C52D64FA5D005742C0 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				BF4181F52D644FA000332178 /* Data */,
+				BFC092892D64F992005742C0 /* Dependency */,
 			);
-			name = Data;
+			name = Dependency;
 			packageProductDependencies = (
 			);
-			productName = Data;
-			productReference = BF4181F42D644FA000332178 /* Data.framework */;
+			productName = Dependency;
+			productReference = BFC092882D64F992005742C0 /* Dependency.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BF4181FA2D644FA000332178 /* DataTests */ = {
+		BFC0928E2D64F992005742C0 /* DependencyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF41820E2D644FA000332178 /* Build configuration list for PBXNativeTarget "DataTests" */;
+			buildConfigurationList = BFC092A12D64F992005742C0 /* Build configuration list for PBXNativeTarget "DependencyTests" */;
 			buildPhases = (
-				BF4181F72D644FA000332178 /* Sources */,
-				BF4181F82D644FA000332178 /* Frameworks */,
-				BF4181F92D644FA000332178 /* Resources */,
+				BFC0928B2D64F992005742C0 /* Sources */,
+				BFC0928C2D64F992005742C0 /* Frameworks */,
+				BFC0928D2D64F992005742C0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BF4181FE2D644FA000332178 /* PBXTargetDependency */,
-				BF4182002D644FA000332178 /* PBXTargetDependency */,
+				BFC092922D64F992005742C0 /* PBXTargetDependency */,
+				BFC092942D64F992005742C0 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				BF4182012D644FA000332178 /* DataTests */,
+				BFC092952D64F992005742C0 /* DependencyTests */,
 			);
-			name = DataTests;
+			name = DependencyTests;
 			packageProductDependencies = (
 			);
-			productName = DataTests;
-			productReference = BF4181FB2D644FA000332178 /* DataTests.xctest */;
+			productName = DependencyTests;
+			productReference = BFC0928F2D64F992005742C0 /* DependencyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -448,16 +473,12 @@
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					BF260B362D64A5C300C180C4 = {
+						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
+					};
 					BF4181902D64437300332178 = {
 						CreatedOnToolsVersion = 16.2;
-					};
-					BF4181A12D64437400332178 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = BF4181902D64437300332178;
-					};
-					BF4181AB2D64437400332178 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = BF4181902D64437300332178;
 					};
 					BF4181C32D6444F300332178 = {
 						CreatedOnToolsVersion = 16.2;
@@ -468,11 +489,10 @@
 						LastSwiftMigration = 1620;
 						TestTargetID = BF4181902D64437300332178;
 					};
-					BF4181F32D644FA000332178 = {
+					BFC092872D64F992005742C0 = {
 						CreatedOnToolsVersion = 16.2;
-						LastSwiftMigration = 1620;
 					};
-					BF4181FA2D644FA000332178 = {
+					BFC0928E2D64F992005742C0 = {
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = BF4181902D64437300332178;
 					};
@@ -495,32 +515,24 @@
 			projectRoot = "";
 			targets = (
 				BF4181902D64437300332178 /* Bwallet */,
-				BF4181A12D64437400332178 /* BwalletTests */,
-				BF4181AB2D64437400332178 /* BwalletUITests */,
 				BF4181C32D6444F300332178 /* Domain */,
 				BF4181CA2D6444F300332178 /* DomainTests */,
-				BF4181F32D644FA000332178 /* Data */,
-				BF4181FA2D644FA000332178 /* DataTests */,
+				BF260B362D64A5C300C180C4 /* Service */,
+				BFC092872D64F992005742C0 /* Dependency */,
+				BFC0928E2D64F992005742C0 /* DependencyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BF260B352D64A5C300C180C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF41818F2D64437300332178 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF4181A02D64437400332178 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF4181AA2D64437400332178 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -541,14 +553,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF4181F22D644FA000332178 /* Resources */ = {
+		BFC092862D64F992005742C0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF4181F92D644FA000332178 /* Resources */ = {
+		BFC0928D2D64F992005742C0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -558,21 +570,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BF260B332D64A5C300C180C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF41818D2D64437300332178 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF41819E2D64437400332178 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF4181A82D64437400332178 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -593,14 +598,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF4181F02D644FA000332178 /* Sources */ = {
+		BFC092842D64F992005742C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF4181F72D644FA000332178 /* Sources */ = {
+		BFC0928B2D64F992005742C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -610,15 +615,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BF4181A42D64437400332178 /* PBXTargetDependency */ = {
+		BF260B492D64A5C300C180C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BF4181902D64437300332178 /* Bwallet */;
-			targetProxy = BF4181A32D64437400332178 /* PBXContainerItemProxy */;
+			target = BF260B362D64A5C300C180C4 /* Service */;
+			targetProxy = BF260B482D64A5C300C180C4 /* PBXContainerItemProxy */;
 		};
-		BF4181AE2D64437400332178 /* PBXTargetDependency */ = {
+		BF260B572D64A5CE00C180C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BF4181902D64437300332178 /* Bwallet */;
-			targetProxy = BF4181AD2D64437400332178 /* PBXContainerItemProxy */;
+			target = BF4181C32D6444F300332178 /* Domain */;
+			targetProxy = BF260B562D64A5CE00C180C4 /* PBXContainerItemProxy */;
 		};
 		BF4181CE2D6444F300332178 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -630,29 +635,125 @@
 			target = BF4181902D64437300332178 /* Bwallet */;
 			targetProxy = BF4181CF2D6444F300332178 /* PBXContainerItemProxy */;
 		};
-		BF4181FE2D644FA000332178 /* PBXTargetDependency */ = {
+		BFC092922D64F992005742C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BF4181F32D644FA000332178 /* Data */;
-			targetProxy = BF4181FD2D644FA000332178 /* PBXContainerItemProxy */;
+			target = BFC092872D64F992005742C0 /* Dependency */;
+			targetProxy = BFC092912D64F992005742C0 /* PBXContainerItemProxy */;
 		};
-		BF4182002D644FA000332178 /* PBXTargetDependency */ = {
+		BFC092942D64F992005742C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BF4181902D64437300332178 /* Bwallet */;
-			targetProxy = BF4181FF2D644FA000332178 /* PBXContainerItemProxy */;
+			targetProxy = BFC092932D64F992005742C0 /* PBXContainerItemProxy */;
 		};
-		BF4182062D644FA000332178 /* PBXTargetDependency */ = {
+		BFC0929A2D64F992005742C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BF4181F32D644FA000332178 /* Data */;
-			targetProxy = BF4182052D644FA000332178 /* PBXContainerItemProxy */;
+			target = BFC092872D64F992005742C0 /* Dependency */;
+			targetProxy = BFC092992D64F992005742C0 /* PBXContainerItemProxy */;
 		};
-		BF4182152D644FA600332178 /* PBXTargetDependency */ = {
+		BFC092C12D64FA5D005742C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BF4181C32D6444F300332178 /* Domain */;
-			targetProxy = BF4182142D644FA600332178 /* PBXContainerItemProxy */;
+			targetProxy = BFC092C02D64FA5D005742C0 /* PBXContainerItemProxy */;
+		};
+		BFC092C52D64FA5D005742C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF260B362D64A5C300C180C4 /* Service */;
+			targetProxy = BFC092C42D64FA5D005742C0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		BF260B4E2D64A5C300C180C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 25WL36ABTN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.Service;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		BF260B4F2D64A5C300C180C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 25WL36ABTN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.Service;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 		BF4181B42D64437400332178 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -845,96 +946,6 @@
 			};
 			name = Release;
 		};
-		BF4181BA2D64437400332178 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 25WL36ABTN;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.BwalletTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bwallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bwallet";
-				XROS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Debug;
-		};
-		BF4181BB2D64437400332178 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 25WL36ABTN;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.BwalletTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bwallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bwallet";
-				XROS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Release;
-		};
-		BF4181BD2D64437400332178 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 25WL36ABTN;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.BwalletUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = Bwallet;
-				XROS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Debug;
-		};
-		BF4181BE2D64437400332178 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 25WL36ABTN;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.BwalletUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = Bwallet;
-				XROS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Release;
-		};
 		BF4181DB2D6444F300332178 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1075,12 +1086,11 @@
 			};
 			name = Release;
 		};
-		BF41820A2D644FA000332178 /* Debug */ = {
+		BFC0929F2D64F992005742C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1105,14 +1115,13 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.Data;
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.Dependency;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = auto;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1121,12 +1130,11 @@
 			};
 			name = Debug;
 		};
-		BF41820B2D644FA000332178 /* Release */ = {
+		BFC092A02D64F992005742C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1151,7 +1159,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.Data;
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.Dependency;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = auto;
 				SKIP_INSTALL = YES;
@@ -1166,7 +1174,7 @@
 			};
 			name = Release;
 		};
-		BF41820F2D644FA000332178 /* Debug */ = {
+		BFC092A22D64F992005742C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
@@ -1177,7 +1185,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.DataTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.DependencyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -1189,7 +1197,7 @@
 			};
 			name = Debug;
 		};
-		BF4182102D644FA000332178 /* Release */ = {
+		BFC092A32D64F992005742C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
@@ -1200,7 +1208,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.DataTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.DependencyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -1215,6 +1223,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BF260B4D2D64A5C300C180C4 /* Build configuration list for PBXNativeTarget "Service" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF260B4E2D64A5C300C180C4 /* Debug */,
+				BF260B4F2D64A5C300C180C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BF41818C2D64437300332178 /* Build configuration list for PBXProject "Bwallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1229,24 +1246,6 @@
 			buildConfigurations = (
 				BF4181B72D64437400332178 /* Debug */,
 				BF4181B82D64437400332178 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BF4181B92D64437400332178 /* Build configuration list for PBXNativeTarget "BwalletTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF4181BA2D64437400332178 /* Debug */,
-				BF4181BB2D64437400332178 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BF4181BC2D64437400332178 /* Build configuration list for PBXNativeTarget "BwalletUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF4181BD2D64437400332178 /* Debug */,
-				BF4181BE2D64437400332178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1269,20 +1268,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF4182092D644FA000332178 /* Build configuration list for PBXNativeTarget "Data" */ = {
+		BFC0929E2D64F992005742C0 /* Build configuration list for PBXNativeTarget "Dependency" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BF41820A2D644FA000332178 /* Debug */,
-				BF41820B2D644FA000332178 /* Release */,
+				BFC0929F2D64F992005742C0 /* Debug */,
+				BFC092A02D64F992005742C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF41820E2D644FA000332178 /* Build configuration list for PBXNativeTarget "DataTests" */ = {
+		BFC092A12D64F992005742C0 /* Build configuration list for PBXNativeTarget "DependencyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BF41820F2D644FA000332178 /* Debug */,
-				BF4182102D644FA000332178 /* Release */,
+				BFC092A22D64F992005742C0 /* Debug */,
+				BFC092A32D64F992005742C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

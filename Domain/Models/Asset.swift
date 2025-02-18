@@ -5,28 +5,30 @@
 //  Created by Jun on 18/2/25.
 //
 
-public struct Asset: Decodable, Identifiable, Equatable {
+public struct Asset: Decodable, Identifiable, Equatable, Sendable {
   public let amount: Decimal
-  public let coin: Coin
+  public let crypto: Crypto
   public let id: ID<Asset>
   
   public init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     amount = try container.decode(Decimal.self, forKey: .amount)
-    id = ID(rawValue: String(try container.decode(Int.self, forKey: .id)))
+    id = try ID(rawValue: String(container.decode(Int.self, forKey: .id)))
     
-    let name = try container.decode(String.self, forKey: .name)
-    coin = Coin(name: name, symbol: .init(rawValue: String(try container.decode(String.self, forKey: .symbol))))
+    crypto = try Crypto(
+      name: container.decode(String.self, forKey: .name),
+      symbol: .init(rawValue: String(container.decode(String.self, forKey: .symbol)))
+    )
   }
   
   public init(
     id: ID<Asset>,
     amount: Decimal,
-    coin: Coin
+    coin: Crypto
   ) {
     self.id = id
     self.amount = amount
-    self.coin = coin
+    self.crypto = coin
   }
 }
 

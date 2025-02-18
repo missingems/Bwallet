@@ -9,7 +9,7 @@ import Testing
 @testable import Domain
 
 struct CoinFiatPairTests {
-  @Test func testDecodingSuccess() throws {
+  @Test func testDecoding_success() throws {
     let jsonData = try #require(
     """
     [
@@ -61,46 +61,46 @@ struct CoinFiatPairTests {
     
     let decoder = JSONDecoder()
     decoder.keyDecodingStrategy = .convertFromSnakeCase
-    let givenCoinFiatPairs = try decoder.decode([CoinFiatPair].self, from: jsonData)
+    let givenCoinFiatPairs = try decoder.decode([CryptoFiatPair].self, from: jsonData)
     
     let expectedCoinFiatPairs = try [
-      CoinFiatPair(
+      CryptoFiatPair(
         coinSymbol: ID(rawValue: "BTC"),
         fiatSymbol: ID(rawValue: "USD"),
         id: ID(rawValue: "1"),
         rate: #require(Decimal(string: "60000"))
       ),
-      CoinFiatPair(
+      CryptoFiatPair(
         coinSymbol: ID(rawValue: "ETH"),
         fiatSymbol: ID(rawValue: "USD"),
         id: ID(rawValue: "2"),
         rate: #require(Decimal(string: "3350"))
       ),
-      CoinFiatPair(
+      CryptoFiatPair(
         coinSymbol: ID(rawValue: "CRO"),
         fiatSymbol: ID(rawValue: "USD"),
         id: ID(rawValue: "3"),
         rate: #require(Decimal(string: "0.09"))
       ),
-      CoinFiatPair(
+      CryptoFiatPair(
         coinSymbol: ID(rawValue: "SOL"),
         fiatSymbol: ID(rawValue: "USD"),
         id: ID(rawValue: "4"),
         rate: #require(Decimal(string: "133"))
       ),
-      CoinFiatPair(
+      CryptoFiatPair(
         coinSymbol: ID(rawValue: "MATIC"),
         fiatSymbol: ID(rawValue: "USD"),
         id: ID(rawValue: "5"),
         rate: #require(Decimal(string: "0.56"))
       ),
-      CoinFiatPair(
+      CryptoFiatPair(
         coinSymbol: ID(rawValue: "ATOM"),
         fiatSymbol: ID(rawValue: "USD"),
         id: ID(rawValue: "6"),
         rate: #require(Decimal(string: "6.94"))
       ),
-      CoinFiatPair(
+      CryptoFiatPair(
         coinSymbol: ID(rawValue: "DOGE"),
         fiatSymbol: ID(rawValue: "USD"),
         id: ID(rawValue: "7"),
@@ -111,7 +111,7 @@ struct CoinFiatPairTests {
     #expect(givenCoinFiatPairs == expectedCoinFiatPairs)
   }
   
-  @Test func testDecodingFailureWithMalformedData() throws {
+  @Test func testDecodingWithMalformedData_failure() throws {
     let malformedJsonData = try #require(
         """
         [
@@ -128,7 +128,7 @@ struct CoinFiatPairTests {
     #expect(throws: DecodingError.self) {
       let decoder = JSONDecoder()
       decoder.keyDecodingStrategy = .convertFromSnakeCase
-      _ = try decoder.decode([CoinFiatPair].self, from: malformedJsonData)
+      _ = try decoder.decode([CryptoFiatPair].self, from: malformedJsonData)
     }
   }
 }

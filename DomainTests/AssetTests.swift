@@ -9,7 +9,7 @@ import Testing
 @testable import Domain
 
 struct AssetTests {
-  @Test func testDecodingSuccess() throws {
+  @Test func testDecoding_success() throws {
     let jsonData = try #require(
         """
         [
@@ -64,18 +64,18 @@ struct AssetTests {
     let givenAssets = try decoder.decode([Asset].self, from: jsonData)
     
     let expectedAssets = [
-      Asset(id: ID(rawValue: "1"), amount: 2.1, coin: Coin(name: "bitcoin", symbol: ID(rawValue: "BTC"))),
-      Asset(id: ID(rawValue: "2"), amount: 10.8, coin: Coin(name: "ethereum", symbol: ID(rawValue: "ETH"))),
-      Asset(id: ID(rawValue: "3"), amount: 12345, coin: Coin(name: "cronos", symbol: ID(rawValue: "CRO"))),
-      Asset(id: ID(rawValue: "4"), amount: 98, coin: Coin(name: "solana", symbol: ID(rawValue: "SOL"))),
-      Asset(id: ID(rawValue: "5"), amount: 0.9, coin: Coin(name: "polygon", symbol: ID(rawValue: "MATIC"))),
-      Asset(id: ID(rawValue: "6"), amount: 100, coin: Coin(name: "cosmos", symbol: ID(rawValue: "ATOM"))),
+      Asset(id: ID(rawValue: "1"), amount: 2.1, coin: Crypto(name: "bitcoin", symbol: ID(rawValue: "BTC"))),
+      Asset(id: ID(rawValue: "2"), amount: 10.8, coin: Crypto(name: "ethereum", symbol: ID(rawValue: "ETH"))),
+      Asset(id: ID(rawValue: "3"), amount: 12345, coin: Crypto(name: "cronos", symbol: ID(rawValue: "CRO"))),
+      Asset(id: ID(rawValue: "4"), amount: 98, coin: Crypto(name: "solana", symbol: ID(rawValue: "SOL"))),
+      Asset(id: ID(rawValue: "5"), amount: 0.9, coin: Crypto(name: "polygon", symbol: ID(rawValue: "MATIC"))),
+      Asset(id: ID(rawValue: "6"), amount: 100, coin: Crypto(name: "cosmos", symbol: ID(rawValue: "ATOM"))),
       Asset(
         id: ID(rawValue: "7"),
         amount: try #require(
           Decimal(string: "1000000000000000000000000")
         ),
-        coin: Coin(
+        coin: Crypto(
           name: "dogecoin",
           symbol: ID(rawValue: "DOGE")
         )
@@ -85,7 +85,7 @@ struct AssetTests {
     #expect(givenAssets == expectedAssets)
   }
   
-  @Test func testDecodingFailure() throws {
+  @Test func testDecoding_failure() throws {
     let malformedJsonData = try #require(
         """
         [
