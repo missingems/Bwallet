@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BF4181CC2D6444F300332178 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; };
+		BF4181FC2D644FA000332178 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181F42D644FA000332178 /* Data.framework */; };
+		BF4182072D644FA000332178 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181F42D644FA000332178 /* Data.framework */; };
+		BF4182082D644FA000332178 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181F42D644FA000332178 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF4182122D644FA600332178 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; };
+		BF4182132D644FA600332178 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		BF4181A32D64437400332178 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +30,91 @@
 			remoteGlobalIDString = BF4181902D64437300332178;
 			remoteInfo = Bwallet;
 		};
+		BF4181CD2D6444F300332178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF4181892D64437300332178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF4181C32D6444F300332178;
+			remoteInfo = Domain;
+		};
+		BF4181CF2D6444F300332178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF4181892D64437300332178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF4181902D64437300332178;
+			remoteInfo = Bwallet;
+		};
+		BF4181FD2D644FA000332178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF4181892D64437300332178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF4181F32D644FA000332178;
+			remoteInfo = Data;
+		};
+		BF4181FF2D644FA000332178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF4181892D64437300332178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF4181902D64437300332178;
+			remoteInfo = Bwallet;
+		};
+		BF4182052D644FA000332178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF4181892D64437300332178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF4181F32D644FA000332178;
+			remoteInfo = Data;
+		};
+		BF4182142D644FA600332178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF4181892D64437300332178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF4181C32D6444F300332178;
+			remoteInfo = Domain;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BF41820D2D644FA000332178 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BF4182132D644FA600332178 /* Domain.framework in Embed Frameworks */,
+				BF4182082D644FA000332178 /* Data.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BF4181912D64437300332178 /* Bwallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bwallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4181A22D64437400332178 /* BwalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BwalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4181AC2D64437400332178 /* BwalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BwalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF4181C42D6444F300332178 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF4181CB2D6444F300332178 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF4181F42D644FA000332178 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF4181FB2D644FA000332178 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BF4181D92D6444F300332178 /* Exceptions for "Domain" folder in "Domain" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			publicHeaders = (
+				Domain.h,
+			);
+			target = BF4181C32D6444F300332178 /* Domain */;
+		};
+		BF41820C2D644FA000332178 /* Exceptions for "Data" folder in "Data" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			publicHeaders = (
+				Data.h,
+			);
+			target = BF4181F32D644FA000332178 /* Data */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BF4181932D64437300332178 /* Bwallet */ = {
@@ -45,6 +132,32 @@
 			path = BwalletUITests;
 			sourceTree = "<group>";
 		};
+		BF4181C52D6444F300332178 /* Domain */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BF4181D92D6444F300332178 /* Exceptions for "Domain" folder in "Domain" target */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BF4181D12D6444F300332178 /* DomainTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DomainTests;
+			sourceTree = "<group>";
+		};
+		BF4181F52D644FA000332178 /* Data */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BF41820C2D644FA000332178 /* Exceptions for "Data" folder in "Data" target */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BF4182012D644FA000332178 /* DataTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DataTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +165,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4182122D644FA600332178 /* Domain.framework in Frameworks */,
+				BF4182072D644FA000332178 /* Data.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +184,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BF4181C12D6444F300332178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF4181C82D6444F300332178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF4181CC2D6444F300332178 /* Domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF4181F12D644FA000332178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF4181F82D644FA000332178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF4181FC2D644FA000332178 /* Data.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +223,11 @@
 				BF4181932D64437300332178 /* Bwallet */,
 				BF4181A52D64437400332178 /* BwalletTests */,
 				BF4181AF2D64437400332178 /* BwalletUITests */,
+				BF4181C52D6444F300332178 /* Domain */,
+				BF4181D12D6444F300332178 /* DomainTests */,
+				BF4181F52D644FA000332178 /* Data */,
+				BF4182012D644FA000332178 /* DataTests */,
+				BF4182112D644FA600332178 /* Frameworks */,
 				BF4181922D64437300332178 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,11 +238,39 @@
 				BF4181912D64437300332178 /* Bwallet.app */,
 				BF4181A22D64437400332178 /* BwalletTests.xctest */,
 				BF4181AC2D64437400332178 /* BwalletUITests.xctest */,
+				BF4181C42D6444F300332178 /* Domain.framework */,
+				BF4181CB2D6444F300332178 /* DomainTests.xctest */,
+				BF4181F42D644FA000332178 /* Data.framework */,
+				BF4181FB2D644FA000332178 /* DataTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		BF4182112D644FA600332178 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BF4181BF2D6444F300332178 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF4181EF2D644FA000332178 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		BF4181902D64437300332178 /* Bwallet */ = {
@@ -102,10 +280,13 @@
 				BF41818D2D64437300332178 /* Sources */,
 				BF41818E2D64437300332178 /* Frameworks */,
 				BF41818F2D64437300332178 /* Resources */,
+				BF41820D2D644FA000332178 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BF4182062D644FA000332178 /* PBXTargetDependency */,
+				BF4182152D644FA600332178 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				BF4181932D64437300332178 /* Bwallet */,
@@ -163,6 +344,100 @@
 			productReference = BF4181AC2D64437400332178 /* BwalletUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		BF4181C32D6444F300332178 /* Domain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF4181DA2D6444F300332178 /* Build configuration list for PBXNativeTarget "Domain" */;
+			buildPhases = (
+				BF4181BF2D6444F300332178 /* Headers */,
+				BF4181C02D6444F300332178 /* Sources */,
+				BF4181C12D6444F300332178 /* Frameworks */,
+				BF4181C22D6444F300332178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BF4181C52D6444F300332178 /* Domain */,
+			);
+			name = Domain;
+			packageProductDependencies = (
+			);
+			productName = Domain;
+			productReference = BF4181C42D6444F300332178 /* Domain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BF4181CA2D6444F300332178 /* DomainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF4181DE2D6444F300332178 /* Build configuration list for PBXNativeTarget "DomainTests" */;
+			buildPhases = (
+				BF4181C72D6444F300332178 /* Sources */,
+				BF4181C82D6444F300332178 /* Frameworks */,
+				BF4181C92D6444F300332178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF4181CE2D6444F300332178 /* PBXTargetDependency */,
+				BF4181D02D6444F300332178 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BF4181D12D6444F300332178 /* DomainTests */,
+			);
+			name = DomainTests;
+			packageProductDependencies = (
+			);
+			productName = DomainTests;
+			productReference = BF4181CB2D6444F300332178 /* DomainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BF4181F32D644FA000332178 /* Data */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF4182092D644FA000332178 /* Build configuration list for PBXNativeTarget "Data" */;
+			buildPhases = (
+				BF4181EF2D644FA000332178 /* Headers */,
+				BF4181F02D644FA000332178 /* Sources */,
+				BF4181F12D644FA000332178 /* Frameworks */,
+				BF4181F22D644FA000332178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BF4181F52D644FA000332178 /* Data */,
+			);
+			name = Data;
+			packageProductDependencies = (
+			);
+			productName = Data;
+			productReference = BF4181F42D644FA000332178 /* Data.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BF4181FA2D644FA000332178 /* DataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF41820E2D644FA000332178 /* Build configuration list for PBXNativeTarget "DataTests" */;
+			buildPhases = (
+				BF4181F72D644FA000332178 /* Sources */,
+				BF4181F82D644FA000332178 /* Frameworks */,
+				BF4181F92D644FA000332178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF4181FE2D644FA000332178 /* PBXTargetDependency */,
+				BF4182002D644FA000332178 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BF4182012D644FA000332178 /* DataTests */,
+			);
+			name = DataTests;
+			packageProductDependencies = (
+			);
+			productName = DataTests;
+			productReference = BF4181FB2D644FA000332178 /* DataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,6 +456,22 @@
 						TestTargetID = BF4181902D64437300332178;
 					};
 					BF4181AB2D64437400332178 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = BF4181902D64437300332178;
+					};
+					BF4181C32D6444F300332178 = {
+						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
+					};
+					BF4181CA2D6444F300332178 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = BF4181902D64437300332178;
+					};
+					BF4181F32D644FA000332178 = {
+						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
+					};
+					BF4181FA2D644FA000332178 = {
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = BF4181902D64437300332178;
 					};
@@ -203,6 +494,10 @@
 				BF4181902D64437300332178 /* Bwallet */,
 				BF4181A12D64437400332178 /* BwalletTests */,
 				BF4181AB2D64437400332178 /* BwalletUITests */,
+				BF4181C32D6444F300332178 /* Domain */,
+				BF4181CA2D6444F300332178 /* DomainTests */,
+				BF4181F32D644FA000332178 /* Data */,
+				BF4181FA2D644FA000332178 /* DataTests */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +518,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BF4181AA2D64437400332178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF4181C22D6444F300332178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF4181C92D6444F300332178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF4181F22D644FA000332178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF4181F92D644FA000332178 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +576,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BF4181C02D6444F300332178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF4181C72D6444F300332178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF4181F02D644FA000332178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF4181F72D644FA000332178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +616,36 @@
 			isa = PBXTargetDependency;
 			target = BF4181902D64437300332178 /* Bwallet */;
 			targetProxy = BF4181AD2D64437400332178 /* PBXContainerItemProxy */;
+		};
+		BF4181CE2D6444F300332178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF4181C32D6444F300332178 /* Domain */;
+			targetProxy = BF4181CD2D6444F300332178 /* PBXContainerItemProxy */;
+		};
+		BF4181D02D6444F300332178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF4181902D64437300332178 /* Bwallet */;
+			targetProxy = BF4181CF2D6444F300332178 /* PBXContainerItemProxy */;
+		};
+		BF4181FE2D644FA000332178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF4181F32D644FA000332178 /* Data */;
+			targetProxy = BF4181FD2D644FA000332178 /* PBXContainerItemProxy */;
+		};
+		BF4182002D644FA000332178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF4181902D64437300332178 /* Bwallet */;
+			targetProxy = BF4181FF2D644FA000332178 /* PBXContainerItemProxy */;
+		};
+		BF4182062D644FA000332178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF4181F32D644FA000332178 /* Data */;
+			targetProxy = BF4182052D644FA000332178 /* PBXContainerItemProxy */;
+		};
+		BF4182152D644FA600332178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF4181C32D6444F300332178 /* Domain */;
+			targetProxy = BF4182142D644FA600332178 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -551,6 +932,280 @@
 			};
 			name = Release;
 		};
+		BF4181DB2D6444F300332178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 25WL36ABTN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		BF4181DC2D6444F300332178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 25WL36ABTN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		BF4181DF2D6444F300332178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25WL36ABTN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bwallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bwallet";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		BF4181E02D6444F300332178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25WL36ABTN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bwallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bwallet";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		BF41820A2D644FA000332178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 25WL36ABTN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.Data;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		BF41820B2D644FA000332178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 25WL36ABTN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.Data;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		BF41820F2D644FA000332178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25WL36ABTN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.DataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bwallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bwallet";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		BF4182102D644FA000332178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25WL36ABTN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.DataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bwallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bwallet";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -586,6 +1241,42 @@
 			buildConfigurations = (
 				BF4181BD2D64437400332178 /* Debug */,
 				BF4181BE2D64437400332178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF4181DA2D6444F300332178 /* Build configuration list for PBXNativeTarget "Domain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF4181DB2D6444F300332178 /* Debug */,
+				BF4181DC2D6444F300332178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF4181DE2D6444F300332178 /* Build configuration list for PBXNativeTarget "DomainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF4181DF2D6444F300332178 /* Debug */,
+				BF4181E02D6444F300332178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF4182092D644FA000332178 /* Build configuration list for PBXNativeTarget "Data" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF41820A2D644FA000332178 /* Debug */,
+				BF41820B2D644FA000332178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF41820E2D644FA000332178 /* Build configuration list for PBXNativeTarget "DataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF41820F2D644FA000332178 /* Debug */,
+				BF4182102D644FA000332178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
