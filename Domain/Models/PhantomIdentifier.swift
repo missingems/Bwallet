@@ -7,4 +7,8 @@
 
 public struct ID<PhantomType>: Hashable, Decodable {
   public let id: String
+  
+  public init(id: String) {
+    self.id = id
+  }
 }

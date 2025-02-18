@@ -10,7 +10,66 @@ import Testing
 @testable import Domain
 
 struct DataTests {
-
+  @Test
+  func testDecodingCoinFiatPair() {
+    let jsonData = """
+        [
+            {
+                "fiat_rate":"47430",
+                "fiat_symbol":"HKD",
+                "id":1,
+                "symbol":"BTC"
+            },
+            {
+                "fiat_rate":"26100",
+                "fiat_symbol":"HKD",
+                "symbol":"ETH",
+                "id":2
+            },
+            {
+                "fiat_rate":"0.7",
+                "fiat_symbol":"HKD",
+                "symbol":"CRO",
+                "id":3
+            },
+            {
+                "fiat_rate":"1043",
+                "fiat_symbol":"HKD",
+                "symbol":"SOL",
+                "id":4
+            },
+            {
+                "fiat_rate":"4.44",
+                "fiat_symbol":"HKD",
+                "symbol":"MATIC",
+                "id":5
+            },
+            {
+                "fiat_rate":"54.14",
+                "fiat_symbol":"HKD",
+                "symbol":"ATOM",
+                "id":6
+            },
+            {
+                "fiat_rate":"0.95",
+                "fiat_symbol":"HKD",
+                "symbol":"DOGE",
+                "id":7
+            }
+        ]
+        """.data(using: .utf8)!
+    
+    do {
+      let decoder = JSONDecoder()
+      decoder.keyDecodingStrategy = .convertFromSnakeCase
+      let decodedPairs = try decoder.decode([CoinFiatPair].self, from: jsonData)
+      print(decodedPairs)
+    } catch {
+      print(error)
+    }
+  }
+  
+  
     @Test func example() async throws {
       let jsonData = """
 [
