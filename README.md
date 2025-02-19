@@ -45,6 +45,6 @@ To simulate a real production scenario, I have also created an **API client**:
 ## Tech Stack
 - **Swift 5.9 / Combine**.
 - **SwiftUI** for UI components.
-- **XCTest/Swift Testingt** for unit testing.
+- **XCTest/Swift Testing** for unit testing.
 
 Made with ❤️ by Jun
