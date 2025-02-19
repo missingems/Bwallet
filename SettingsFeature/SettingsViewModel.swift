@@ -14,7 +14,7 @@ import Service
   let userService: any UserService
   var fiats: [Fiat]
   
-  var selectedFiat: Fiat {
+  public var selectedFiat: Fiat {
     didSet {
       userService.setSelectedFiatCurrency(selectedFiat)
     }
