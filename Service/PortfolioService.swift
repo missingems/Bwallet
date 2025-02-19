@@ -15,4 +15,5 @@ public enum PortfolioServiceError: Error, Equatable {
 public protocol PortfolioService {
   var networkClient: NetworkClient { get }
   func getAllAssets() -> AnyPublisher<[Asset], PortfolioServiceError>
+  init(networkClient: any Service.NetworkClient)
 }

@@ -9,14 +9,14 @@ import Combine
 import Domain
 import Service
 
-final class PortfolioService: Service.PortfolioService {
-  var networkClient: any Service.NetworkClient
+public final class PortfolioService: Service.PortfolioService {
+  public var networkClient: any Service.NetworkClient
   
-  init(networkClient: any Service.NetworkClient) {
+  public init(networkClient: any Service.NetworkClient) {
     self.networkClient = networkClient
   }
   
-  func getAllAssets() -> AnyPublisher<[Asset], PortfolioServiceError> {
+  public func getAllAssets() -> AnyPublisher<[Asset], PortfolioServiceError> {
     let router = PortfolioAPI.getAllAssets
     
     return networkClient.request(router)

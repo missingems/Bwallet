@@ -9,11 +9,11 @@ import Combine
 import Domain
 import Service
 
-final class DashboardService: Service.DashboardService {
-  let portfolioService: Service.PortfolioService
-  let currencyService: Service.CurrencyService
+public final class DashboardService: Service.DashboardService {
+  public let portfolioService: Service.PortfolioService
+  public let currencyService: Service.CurrencyService
   
-  internal init(
+  public init(
     portfolioService: Service.PortfolioService,
     currencyService: Service.CurrencyService
   ) {
@@ -21,7 +21,7 @@ final class DashboardService: Service.DashboardService {
     self.currencyService = currencyService
   }
   
-  func getAllDisplayableAssets(with fiat: Fiat) -> AnyPublisher<Dashboard, DashboardServiceError> {
+  public func getAllDisplayableAssets(with fiat: Fiat) -> AnyPublisher<Dashboard, DashboardServiceError> {
     let assetsPublisher = portfolioService.getAllAssets()
       .mapError { DashboardServiceError.internalError($0.localizedDescription) }
     let ratesPublisher = currencyService.getCryptoCurrencyToFiatCurrencyRates(with: fiat.symbol)

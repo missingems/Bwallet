@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import Service
+import Dependency
 
 @main
 struct BwalletApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      TabView {
+        DashboardView(
+          viewModel: DashboardViewModel(
+            dashboardService: Dependency.DashboardService(
+              portfolioService: Dependency.PortfolioService(networkClient: Dependency.NetworkClient(environment: .preview)),
+              currencyService: Dependency.CurrencyService(networkClient: Dependency.NetworkClient(environment: .preview))
+            )
+          )
+        )
+      }
     }
   }
 }

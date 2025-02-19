@@ -9,14 +9,14 @@ import Combine
 import Domain
 import Service
 
-final class CurrencyService: Service.CurrencyService {
-  let networkClient: any Service.NetworkClient
+public final class CurrencyService: Service.CurrencyService {
+  public let networkClient: any Service.NetworkClient
   
-  init(networkClient: any Service.NetworkClient) {
+  public init(networkClient: any Service.NetworkClient) {
     self.networkClient = networkClient
   }
   
-  func getCryptoCurrencyToFiatCurrencyRates(
+  public func getCryptoCurrencyToFiatCurrencyRates(
     with fiatCurrency: ID<Fiat>
   ) -> AnyPublisher<[CryptoFiatPair], CurrencyError> {
     guard let router = CurrencyAPI(fiat: fiatCurrency) else {
