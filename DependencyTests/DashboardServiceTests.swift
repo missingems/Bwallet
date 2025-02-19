@@ -15,15 +15,19 @@ struct DashboardServiceTests {
   var cancellables: Set<AnyCancellable> = []
   
   @Test mutating func testDashboardService_getDisplayableAssetsForHKD_success() async throws {
+    let userService = UserService()
+    userService.setSelectedFiatCurrency(.init(symbol: .init(rawValue: "HKD")))
+    
     let service = DashboardService(
       portfolioService: PortfolioService(networkClient: NetworkClient(environment: .preview)),
-      currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
+      currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview)),
+      userService: userService
     )
     
     var result: Result<Dashboard, DashboardServiceError>?
     
     await confirmation { confirmation in
-      service.getAllDisplayableAssets(with: Fiat(symbol: ID(rawValue: "HKD"))).sink { completion in
+      service.getAllDisplayableAssets().sink { completion in
         switch completion {
         case let .failure(error):
           result = .failure(error)
@@ -102,15 +106,19 @@ struct DashboardServiceTests {
   }
   
   @Test mutating func testDashboardService_getDisplayableAssetsForUSD_success() async throws {
+    let userService = UserService()
+    userService.setSelectedFiatCurrency(.init(symbol: .init(rawValue: "USD")))
+    
     let service = DashboardService(
       portfolioService: PortfolioService(networkClient: NetworkClient(environment: .preview)),
-      currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
+      currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview)),
+      userService: userService
     )
     
     var result: Result<Dashboard, DashboardServiceError>?
     
     try await confirmation { confirmation in
-      service.getAllDisplayableAssets(with: Fiat(symbol: ID(rawValue: "USD"))).sink { completion in
+      service.getAllDisplayableAssets().sink { completion in
         switch completion {
         case let .failure(error):
           result = .failure(error)
@@ -186,35 +194,5 @@ struct DashboardServiceTests {
       
       #expect(given == expected)
     }
-  }
-
-  @Test mutating func testDashboardService_getDisplayableAssetsWithUnsupportedCurrency_shouldReceiveError() async throws {
-    let service = DashboardService(
-      portfolioService: PortfolioService(networkClient: NetworkClient(environment: .preview)),
-      currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
-    )
-    
-    var result: Result<Dashboard, DashboardServiceError>?
-    
-    await confirmation { confirmation in
-      service.getAllDisplayableAssets(with: Fiat(symbol: ID(rawValue: "SGD"))).sink { completion in
-        switch completion {
-        case let .failure(error):
-          result = .failure(error)
-          confirmation.confirm()
-          
-        case .finished:
-          break
-        }
-      } receiveValue: { assets in
-        result = .success(assets)
-        confirmation.confirm()
-      }
-      .store(in: &cancellables)
-    }
-    
-    #expect(throws: DashboardServiceError.self, performing: {
-      let _ = try result?.get()
-    })
   }
 }

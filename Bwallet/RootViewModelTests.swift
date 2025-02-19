@@ -19,7 +19,8 @@ struct RootViewModelTests {
       viewModel: DashboardViewModel(
         dashboardService: DashboardService(
           portfolioService: PortfolioService(networkClient: NetworkClient(environment: .preview)),
-          currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
+          currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview)),
+          userService: UserService()
         ),
         title: "Portfolio"
       )

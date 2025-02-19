@@ -13,10 +13,16 @@ import Combine
 final class PortfolioFeatureTests: XCTestCase {
   var cancellables = Set<AnyCancellable>()
   
+  override func tearDown() {
+    cancellables.removeAll()
+    super.tearDown()
+  }
+  
   func test_default() {
     let service = DashboardService(
       portfolioService: PortfolioService(networkClient: NetworkClient(environment: .preview)),
-      currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
+      currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview)),
+      userService: UserService()
     )
     
     let viewModel = DashboardViewModel(dashboardService: service, title: "Portfolio")
@@ -24,10 +30,14 @@ final class PortfolioFeatureTests: XCTestCase {
     XCTAssertEqual(viewModel.title, "Portfolio")
   }
   
-  func test_onAppear_getAllDisplayableAssets() async throws {
+  func test_onAppear_withHKDSelected_getAllDisplayableAssets() async throws {
+    let userService = UserService()
+    userService.setSelectedFiatCurrency(.init(symbol: .init(rawValue: "HKD")))
+    
     let service = DashboardService(
       portfolioService: PortfolioService(networkClient: NetworkClient(environment: .preview)),
-      currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
+      currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview)),
+      userService: userService
     )
     
     let viewModel = DashboardViewModel(dashboardService: service, title: "Portfolio")

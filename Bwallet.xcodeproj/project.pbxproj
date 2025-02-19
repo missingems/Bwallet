@@ -430,11 +430,6 @@
 			path = CoreTests;
 			sourceTree = "<group>";
 		};
-		BFB7542B2D65A17E007F1F06 /* BwalletTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BwalletTests;
-			sourceTree = "<group>";
-		};
 		BFB7543F2D65A2AF007F1F06 /* SettingsFeature */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -591,7 +586,6 @@
 				BF4E5D6A2D6587870050465E /* PortfolioFeatureTests */,
 				BF4E5D7F2D6587C10050465E /* Core */,
 				BF4E5D8B2D6587C10050465E /* CoreTests */,
-				BFB7542B2D65A17E007F1F06 /* BwalletTests */,
 				BFB7543F2D65A2AF007F1F06 /* SettingsFeature */,
 				BFB7544B2D65A2AF007F1F06 /* SettingsFeatureTests */,
 				BF4182112D644FA600332178 /* Frameworks */,
@@ -886,9 +880,6 @@
 			);
 			dependencies = (
 				BFB7542F2D65A17E007F1F06 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BFB7542B2D65A17E007F1F06 /* BwalletTests */,
 			);
 			name = BwalletTests;
 			packageProductDependencies = (
