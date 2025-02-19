@@ -16,8 +16,6 @@
 		BF4E5D702D6587870050465E /* PortfolioFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4E5D5D2D6587870050465E /* PortfolioFeature.framework */; };
 		BF4E5D712D6587870050465E /* PortfolioFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF4E5D5D2D6587870050465E /* PortfolioFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF4E5D862D6587C10050465E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4E5D7E2D6587C10050465E /* Core.framework */; };
-		BF4E5D912D6587C10050465E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4E5D7E2D6587C10050465E /* Core.framework */; };
-		BF4E5D922D6587C10050465E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF4E5D7E2D6587C10050465E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF4E5DA42D6588680050465E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4E5D7E2D6587C10050465E /* Core.framework */; };
 		BF4E5DA52D6588680050465E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF4E5D7E2D6587C10050465E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF4E5DA92D65889B0050465E /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF260B372D64A5C300C180C4 /* Service.framework */; };
@@ -26,6 +24,8 @@
 		BF4E5DAE2D6588A10050465E /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF4E5DB12D6589A90050465E /* Dependency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC092882D64F992005742C0 /* Dependency.framework */; };
 		BF4E5DB22D6589A90050465E /* Dependency.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFC092882D64F992005742C0 /* Dependency.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BFB754102D659A23007F1F06 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4E5D7E2D6587C10050465E /* Core.framework */; };
+		BFB754112D659A23007F1F06 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF4E5D7E2D6587C10050465E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BFC092902D64F992005742C0 /* Dependency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC092882D64F992005742C0 /* Dependency.framework */; };
 		BFC0929B2D64F992005742C0 /* Dependency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC092882D64F992005742C0 /* Dependency.framework */; };
 		BFC0929C2D64F992005742C0 /* Dependency.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFC092882D64F992005742C0 /* Dependency.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -99,13 +99,6 @@
 			remoteGlobalIDString = BF4181902D64437300332178;
 			remoteInfo = Bwallet;
 		};
-		BF4E5D8F2D6587C10050465E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF4181892D64437300332178 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF4E5D7D2D6587C10050465E;
-			remoteInfo = Core;
-		};
 		BF4E5DA62D6588680050465E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF4181892D64437300332178 /* Project object */;
@@ -133,6 +126,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = BFC092872D64F992005742C0;
 			remoteInfo = Dependency;
+		};
+		BFB754122D659A23007F1F06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF4181892D64437300332178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF4E5D7D2D6587C10050465E;
+			remoteInfo = Core;
 		};
 		BFC092912D64F992005742C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -181,7 +181,6 @@
 				BF260B4B2D64A5C300C180C4 /* Service.framework in Embed Frameworks */,
 				BFC0929C2D64F992005742C0 /* Dependency.framework in Embed Frameworks */,
 				BF4E5D712D6587870050465E /* PortfolioFeature.framework in Embed Frameworks */,
-				BF4E5D922D6587C10050465E /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +216,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				BF4E5DB22D6589A90050465E /* Dependency.framework in Embed Frameworks */,
+				BFB754112D659A23007F1F06 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,7 +371,6 @@
 				BF260B4A2D64A5C300C180C4 /* Service.framework in Frameworks */,
 				BFC0929B2D64F992005742C0 /* Dependency.framework in Frameworks */,
 				BF4E5D702D6587870050465E /* PortfolioFeature.framework in Frameworks */,
-				BF4E5D912D6587C10050465E /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4E5D652D6587870050465E /* PortfolioFeature.framework in Frameworks */,
+				BFB754102D659A23007F1F06 /* Core.framework in Frameworks */,
 				BF4E5DB12D6589A90050465E /* Dependency.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,7 +568,6 @@
 				BF260B492D64A5C300C180C4 /* PBXTargetDependency */,
 				BFC0929A2D64F992005742C0 /* PBXTargetDependency */,
 				BF4E5D6F2D6587870050465E /* PBXTargetDependency */,
-				BF4E5D902D6587C10050465E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				BF4181932D64437300332178 /* Bwallet */,
@@ -669,6 +668,7 @@
 				BF4E5D672D6587870050465E /* PBXTargetDependency */,
 				BF4E5D692D6587870050465E /* PBXTargetDependency */,
 				BF4E5DB42D6589A90050465E /* PBXTargetDependency */,
+				BFB754132D659A23007F1F06 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				BF4E5D6A2D6587870050465E /* PortfolioFeatureTests */,
@@ -1048,11 +1048,6 @@
 			target = BF4181902D64437300332178 /* Bwallet */;
 			targetProxy = BF4E5D892D6587C10050465E /* PBXContainerItemProxy */;
 		};
-		BF4E5D902D6587C10050465E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF4E5D7D2D6587C10050465E /* Core */;
-			targetProxy = BF4E5D8F2D6587C10050465E /* PBXContainerItemProxy */;
-		};
 		BF4E5DA72D6588680050465E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BF4E5D7D2D6587C10050465E /* Core */;
@@ -1072,6 +1067,11 @@
 			isa = PBXTargetDependency;
 			target = BFC092872D64F992005742C0 /* Dependency */;
 			targetProxy = BF4E5DB32D6589A90050465E /* PBXContainerItemProxy */;
+		};
+		BFB754132D659A23007F1F06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF4E5D7D2D6587C10050465E /* Core */;
+			targetProxy = BFB754122D659A23007F1F06 /* PBXContainerItemProxy */;
 		};
 		BFC092922D64F992005742C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1685,14 +1685,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = xros;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,3,4,6,7";
+				TARGETED_DEVICE_FAMILY = "1,2,6,7";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 				XROS_DEPLOYMENT_TARGET = 2.2;
@@ -1726,14 +1726,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = xros;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,3,4,6,7";
+				TARGETED_DEVICE_FAMILY = "1,2,6,7";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1751,11 +1751,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.CoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
 				SDKROOT = xros;
-				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 7;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bwallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bwallet";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -1771,11 +1773,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.missingems.blockain.CoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
 				SDKROOT = xros;
-				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 7;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bwallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bwallet";
 				VALIDATE_PRODUCT = YES;
 				XROS_DEPLOYMENT_TARGET = 2.2;
