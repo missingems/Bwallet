@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct DashboardView: View {
+public struct DashboardView: View {
   private var viewModel: DashboardViewModel
   
-  var body: some View {
+  public var body: some View {
     NavigationView {
       VStack(spacing: 0) {
         if let result = viewModel.content {
@@ -46,7 +46,7 @@ struct DashboardView: View {
     }
   }
   
-  init(viewModel: DashboardViewModel) {
+  public init(viewModel: DashboardViewModel) {
     self.viewModel = viewModel
   }
   

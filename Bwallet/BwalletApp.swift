@@ -8,6 +8,7 @@
 import SwiftUI
 import Service
 import Dependency
+import PortfolioFeature
 
 @main
 struct BwalletApp: App {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Numeric {
+public extension Numeric {
   var formattedWithSeparator: String {
     let formatter = NumberFormatter()
     formatter.numberStyle = .decimal

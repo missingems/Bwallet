@@ -8,15 +8,16 @@
 import Combine
 import Domain
 import Service
+import Core
 
-@Observable final class DashboardViewModel {
+@Observable public final class DashboardViewModel {
   let title: String
   var content: Result<Content, Error>?
   
   private var cancellables = Set<AnyCancellable>()
   private let dashboardService: Service.DashboardService
   
-  init(dashboardService: any Service.DashboardService) {
+  public init(dashboardService: any Service.DashboardService) {
     self.title = "Portfolio"
     self.dashboardService = dashboardService
   }
