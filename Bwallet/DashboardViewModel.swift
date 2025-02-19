@@ -11,8 +11,7 @@ import Service
 
 @Observable final class DashboardViewModel {
   let title: String
-  var content: Content?
-  var error: Error?
+  var content: Result<Content, Error>?
   
   private var cancellables = Set<AnyCancellable>()
   private let dashboardService: Service.DashboardService
@@ -25,40 +24,42 @@ import Service
   func send(_ action: DashboardViewModel.Action) {
     switch action {
     case .onAppear:
-      onAppear()
+      getAllDisplayableAssets()
     }
   }
   
-  private func onAppear() {
+  private func getAllDisplayableAssets() {
     dashboardService.getAllDisplayableAssets(with: Fiat(symbol: ID(rawValue: "HKD")))
       .receive(on: DispatchQueue.main)
       .sink { [weak self] completion in
         switch completion {
-        case .failure(let error):
-          self?.error = error
+        case let .failure(error):
+          self?.content = .failure(error)
           
         case .finished:
           break
         }
       } receiveValue: { [weak self] dashboard in
-        self?.content = DashboardViewModel.Content(
-          header: DashboardViewModel.Content.Header(
-            title: "$\(dashboard.totalBalance.formattedWithSeparator)",
-            caption: "Total Balance (\(dashboard.fiatCurrency.symbol.rawValue))"
-          ),
-          rows: dashboard.displayableAssets.compactMap { value in
-            if case let .content(cryptoName, cryptoSymbol, balance, fiatBalance, id) = value {
-              return DashboardViewModel.Content.Row(
-                title: cryptoSymbol,
-                subtitle: cryptoName.capitalized,
-                value: "$\(fiatBalance.formattedWithSeparator)",
-                secondaryValue: "\(balance.formattedWithSeparator) \(cryptoSymbol)",
-                id: id
-              )
-            } else {
-              return nil
+        self?.content = .success(
+          DashboardViewModel.Content(
+            header: DashboardViewModel.Content.Header(
+              title: "$\(dashboard.totalBalance.formattedWithSeparator)",
+              caption: "Total Balance (\(dashboard.fiatCurrency.symbol.rawValue))"
+            ),
+            rows: dashboard.displayableAssets.compactMap { value in
+              if case let .content(cryptoName, cryptoSymbol, balance, fiatBalance, id) = value {
+                return DashboardViewModel.Content.Row(
+                  title: cryptoSymbol,
+                  subtitle: cryptoName.capitalized,
+                  value: "$\(fiatBalance.formattedWithSeparator)",
+                  secondaryValue: "\(balance.formattedWithSeparator) \(cryptoSymbol)",
+                  id: id
+                )
+              } else {
+                return nil
+              }
             }
-          }
+          )
         )
       }
       .store(in: &cancellables)
