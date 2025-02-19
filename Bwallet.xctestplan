@@ -13,6 +13,30 @@
   },
   "testTargets" : [
     {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:Bwallet.xcodeproj",
+        "identifier" : "BF4E5D632D6587870050465E",
+        "name" : "PortfolioFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Bwallet.xcodeproj",
+        "identifier" : "BFB754442D65A2AF007F1F06",
+        "name" : "SettingsFeatureTests"
+      }
+    },
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:Bwallet.xcodeproj",
+        "identifier" : "BFB754292D65A17E007F1F06",
+        "name" : "BwalletTests"
+      }
+    },
+    {
+      "parallelizable" : false,
       "target" : {
         "containerPath" : "container:Bwallet.xcodeproj",
         "identifier" : "BFC0928E2D64F992005742C0",
@@ -20,6 +44,15 @@
       }
     },
     {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:Bwallet.xcodeproj",
+        "identifier" : "BF4E5D842D6587C10050465E",
+        "name" : "CoreTests"
+      }
+    },
+    {
+      "parallelizable" : false,
       "target" : {
         "containerPath" : "container:Bwallet.xcodeproj",
         "identifier" : "BF4181CA2D6444F300332178",

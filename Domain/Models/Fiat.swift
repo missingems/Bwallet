@@ -5,7 +5,7 @@
 //  Created by Jun on 18/2/25.
 //
 
-public struct Fiat: Equatable, Sendable {
+public struct Fiat: Equatable, Sendable, Hashable {
   public let symbol: ID<Fiat>
   
   public init(symbol: ID<Fiat>) {

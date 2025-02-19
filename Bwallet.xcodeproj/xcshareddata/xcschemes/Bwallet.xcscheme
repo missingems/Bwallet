@@ -40,7 +40,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BF4181A12D64437400332178"
+               BlueprintIdentifier = "BFB754292D65A17E007F1F06"
                BuildableName = "BwalletTests.xctest"
                BlueprintName = "BwalletTests"
                ReferencedContainer = "container:Bwallet.xcodeproj">
@@ -98,6 +98,39 @@
                BlueprintIdentifier = "BFC0928E2D64F992005742C0"
                BuildableName = "DependencyTests.xctest"
                BlueprintName = "DependencyTests"
+               ReferencedContainer = "container:Bwallet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BF4E5D632D6587870050465E"
+               BuildableName = "PortfolioFeatureTests.xctest"
+               BlueprintName = "PortfolioFeatureTests"
+               ReferencedContainer = "container:Bwallet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BF4E5D842D6587C10050465E"
+               BuildableName = "CoreTests.xctest"
+               BlueprintName = "CoreTests"
+               ReferencedContainer = "container:Bwallet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BFB754442D65A2AF007F1F06"
+               BuildableName = "SettingsFeatureTests.xctest"
+               BlueprintName = "SettingsFeatureTests"
                ReferencedContainer = "container:Bwallet.xcodeproj">
             </BuildableReference>
          </TestableReference>

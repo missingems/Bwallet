@@ -18,4 +18,6 @@ public protocol CurrencyService {
   func getCryptoCurrencyToFiatCurrencyRates(
     with fiatCurrency: ID<Fiat>
   ) -> AnyPublisher<[CryptoFiatPair], CurrencyError>
+  
+  init(networkClient: any Service.NetworkClient)
 }
