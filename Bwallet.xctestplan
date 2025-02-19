@@ -22,6 +22,13 @@
     {
       "target" : {
         "containerPath" : "container:Bwallet.xcodeproj",
+        "identifier" : "BF4E5D632D6587870050465E",
+        "name" : "PortfolioFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Bwallet.xcodeproj",
         "identifier" : "BF4E5D842D6587C10050465E",
         "name" : "CoreTests"
       }
@@ -36,8 +43,8 @@
     {
       "target" : {
         "containerPath" : "container:Bwallet.xcodeproj",
-        "identifier" : "BF4E5D632D6587870050465E",
-        "name" : "PortfolioFeatureTests"
+        "identifier" : "BFB754292D65A17E007F1F06",
+        "name" : "BwalletTests"
       }
     }
   ],

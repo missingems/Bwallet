@@ -40,7 +40,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BF4E5D4E2D6586F90050465E"
+               BlueprintIdentifier = "BFB754292D65A17E007F1F06"
                BuildableName = "BwalletTests.xctest"
                BlueprintName = "BwalletTests"
                ReferencedContainer = "container:Bwallet.xcodeproj">
