@@ -34,4 +34,8 @@ public final class UserService: Service.UserService {
     UserDefaults.standard.set(fiat.symbol.rawValue, forKey: "selectedFiatCurrency")
     UserDefaults.standard.synchronize()
   }
+  
+  public func reset() {
+    UserDefaults.standard.removeObject(forKey: "selectedFiatCurrency")
+  }
 }
