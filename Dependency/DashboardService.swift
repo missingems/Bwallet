@@ -12,16 +12,21 @@ import Service
 public final class DashboardService: Service.DashboardService {
   public let portfolioService: Service.PortfolioService
   public let currencyService: Service.CurrencyService
+  public let userService: Service.UserService
   
   public init(
     portfolioService: Service.PortfolioService,
-    currencyService: Service.CurrencyService
+    currencyService: Service.CurrencyService,
+    userService: Service.UserService
   ) {
     self.portfolioService = portfolioService
     self.currencyService = currencyService
+    self.userService = userService
   }
   
-  public func getAllDisplayableAssets(with fiat: Fiat) -> AnyPublisher<Dashboard, DashboardServiceError> {
+  public func getAllDisplayableAssets() -> AnyPublisher<Dashboard, DashboardServiceError> {
+    let fiat = userService.getSelectedFiatCurrency()
+    
     let assetsPublisher = portfolioService.getAllAssets()
       .mapError { DashboardServiceError.internalError($0.localizedDescription) }
     let ratesPublisher = currencyService.getCryptoCurrencyToFiatCurrencyRates(with: fiat.symbol)

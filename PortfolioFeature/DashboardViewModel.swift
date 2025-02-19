@@ -31,7 +31,7 @@ import Core
   }
   
   private func getAllDisplayableAssets() {
-    dashboardService.getAllDisplayableAssets(with: Fiat(symbol: ID(rawValue: "HKD")))
+    dashboardService.getAllDisplayableAssets()
       .receive(on: DispatchQueue.main)
       .sink { [weak self] completion in
         switch completion {

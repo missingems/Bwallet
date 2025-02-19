@@ -25,6 +25,17 @@
                ReferencedContainer = "container:Bwallet.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BFB754442D65A2AF007F1F06"
+               BuildableName = "SettingsFeatureTests.xctest"
+               BlueprintName = "SettingsFeatureTests"
+               ReferencedContainer = "container:Bwallet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

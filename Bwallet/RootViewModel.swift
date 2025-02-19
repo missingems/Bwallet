@@ -7,6 +7,8 @@
 
 import Service
 import PortfolioFeature
+import SettingsFeature
+import SwiftUI
 
 struct RootViewModel {
   let tabs: [Tab]
@@ -20,10 +22,15 @@ extension RootViewModel {
       viewModel: DashboardViewModel
     )
     
+    case settings(title: String, tabSystemIconName: String, viewModel: Binding<SettingsViewModel>)
+    
     var id: String {
       switch self {
       case .portfolio:
         return "portfolio"
+        
+      case .settings:
+        return "settings"
       }
     }
   }
