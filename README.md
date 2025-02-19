@@ -33,8 +33,11 @@ This project follows **Clean Architecture** principles:
 - **Settings Feature Module**: UI layer to pick fiat currency.
 - **Main App Module**: Acts as a **Coordinator**, handling UI navigation and dependency injection.
 
-### API Client
-To simulate a real production scenario, an **API client** is created:
+### Highlights
+Unit Test
+- 95% coverage
+
+To simulate a real production scenario, I have also created an **API client**:
 - Supports both **Live** and **Preview** environments. (**Live** is not implemented, out of scope)
 - Uses **Preview Mode** for mock data.
 - The dependency interacts with this API client as if it's making actual network calls.
