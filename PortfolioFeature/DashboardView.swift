@@ -13,29 +13,30 @@ public struct DashboardView: View {
   public var body: some View {
     NavigationView {
       VStack(spacing: 0) {
-        if let result = viewModel.content {
-          switch result {
-          case let .success(content):
-            ScrollView(.vertical) {
-              Section {
-                VStack(spacing: 5.0) {
-                  ForEach(Array(zip(content.rows, content.rows.indices)), id: \.0.id) { value in
-                    let row = value.0
-                    let index = value.1
-                    
-                    rowView(at: index, with: row)
-                  }
+        switch viewModel.state {
+        case .loading:
+          ProgressView()
+          
+        case let .data(content):
+          ScrollView(.vertical) {
+            Section {
+              VStack(spacing: 5.0) {
+                ForEach(Array(zip(content.rows, content.rows.indices)), id: \.0.id) { value in
+                  let row = value.0
+                  let index = value.1
+                  
+                  rowView(at: index, with: row)
                 }
-              } header: {
-                sectionHeader(with: content)
-                  .padding(.vertical, 34.0)
               }
+            } header: {
+              sectionHeader(with: content)
+                .padding(.vertical, 34.0)
             }
-            .safeAreaPadding(.horizontal, nil)
-            
-          case let .failure(error):
-            Text(error.localizedDescription)
           }
+          .safeAreaPadding(.horizontal, nil)
+          
+        case let .error(error):
+          Text(error)
         }
       }
       .navigationTitle(viewModel.title)

@@ -24,6 +24,8 @@
 		BF4E5DAA2D65889B0050465E /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF260B372D64A5C300C180C4 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF4E5DAD2D6588A10050465E /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; };
 		BF4E5DAE2D6588A10050465E /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF4181C42D6444F300332178 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF4E5DB12D6589A90050465E /* Dependency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC092882D64F992005742C0 /* Dependency.framework */; };
+		BF4E5DB22D6589A90050465E /* Dependency.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFC092882D64F992005742C0 /* Dependency.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BFC092902D64F992005742C0 /* Dependency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC092882D64F992005742C0 /* Dependency.framework */; };
 		BFC0929B2D64F992005742C0 /* Dependency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC092882D64F992005742C0 /* Dependency.framework */; };
 		BFC0929C2D64F992005742C0 /* Dependency.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFC092882D64F992005742C0 /* Dependency.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -125,6 +127,13 @@
 			remoteGlobalIDString = BF4181C32D6444F300332178;
 			remoteInfo = Domain;
 		};
+		BF4E5DB32D6589A90050465E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF4181892D64437300332178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFC092872D64F992005742C0;
+			remoteInfo = Dependency;
+		};
 		BFC092912D64F992005742C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF4181892D64437300332178 /* Project object */;
@@ -197,6 +206,17 @@
 				BF4E5DAE2D6588A10050465E /* Domain.framework in Embed Frameworks */,
 				BF4E5DAA2D65889B0050465E /* Service.framework in Embed Frameworks */,
 				BF4E5DA52D6588680050465E /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF4E5DB52D6589A90050465E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BF4E5DB22D6589A90050465E /* Dependency.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4E5D652D6587870050465E /* PortfolioFeature.framework in Frameworks */,
+				BF4E5DB12D6589A90050465E /* Dependency.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,12 +661,14 @@
 				BF4E5D602D6587870050465E /* Sources */,
 				BF4E5D612D6587870050465E /* Frameworks */,
 				BF4E5D622D6587870050465E /* Resources */,
+				BF4E5DB52D6589A90050465E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				BF4E5D672D6587870050465E /* PBXTargetDependency */,
 				BF4E5D692D6587870050465E /* PBXTargetDependency */,
+				BF4E5DB42D6589A90050465E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				BF4E5D6A2D6587870050465E /* PortfolioFeatureTests */,
@@ -1044,6 +1067,11 @@
 			isa = PBXTargetDependency;
 			target = BF4181C32D6444F300332178 /* Domain */;
 			targetProxy = BF4E5DAF2D6588A10050465E /* PBXContainerItemProxy */;
+		};
+		BF4E5DB42D6589A90050465E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFC092872D64F992005742C0 /* Dependency */;
+			targetProxy = BF4E5DB32D6589A90050465E /* PBXContainerItemProxy */;
 		};
 		BFC092922D64F992005742C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

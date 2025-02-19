@@ -12,7 +12,7 @@ import Core
 
 @Observable public final class DashboardViewModel {
   let title: String
-  var content: Result<Content, Error>?
+  var state: State
   
   private var cancellables = Set<AnyCancellable>()
   private let dashboardService: Service.DashboardService
@@ -20,6 +20,7 @@ import Core
   public init(dashboardService: any Service.DashboardService) {
     self.title = "Portfolio"
     self.dashboardService = dashboardService
+    self.state = .loading
   }
   
   func send(_ action: DashboardViewModel.Action) {
@@ -35,13 +36,13 @@ import Core
       .sink { [weak self] completion in
         switch completion {
         case let .failure(error):
-          self?.content = .failure(error)
+          self?.state = .error(error.localizedDescription)
           
         case .finished:
           break
         }
       } receiveValue: { [weak self] dashboard in
-        self?.content = .success(
+        self?.state = .data(
           DashboardViewModel.Content(
             header: DashboardViewModel.Content.Header(
               title: "$\(dashboard.totalBalance.formattedWithSeparator)",
@@ -74,13 +75,19 @@ extension DashboardViewModel {
 }
 
 extension DashboardViewModel {
-  struct Content {
-    struct Header {
+  enum State: Equatable {
+    case loading
+    case data(Content)
+    case error(String)
+  }
+  
+  struct Content: Equatable {
+    struct Header: Equatable {
       let title: String
       let caption: String
     }
     
-    struct Row {
+    struct Row: Equatable {
       let title: String
       let subtitle: String
       let value: String

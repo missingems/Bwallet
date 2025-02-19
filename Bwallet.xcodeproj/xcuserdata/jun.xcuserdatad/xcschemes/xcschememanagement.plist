@@ -39,6 +39,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>PortfolioFeatureTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>Service.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -98,6 +103,11 @@
 			<true/>
 		</dict>
 		<key>BF4181FA2D644FA000332178</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF4E5D632D6587870050465E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
