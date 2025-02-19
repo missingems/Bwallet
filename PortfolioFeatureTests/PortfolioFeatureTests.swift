@@ -13,13 +13,24 @@ import Combine
 final class PortfolioFeatureTests: XCTestCase {
   var cancellables = Set<AnyCancellable>()
   
+  func test_default() {
+    let service = DashboardService(
+      portfolioService: PortfolioService(networkClient: NetworkClient(environment: .preview)),
+      currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
+    )
+    
+    let viewModel = DashboardViewModel(dashboardService: service, title: "Portfolio")
+    XCTAssertEqual(viewModel.state, .loading)
+    XCTAssertEqual(viewModel.title, "Portfolio")
+  }
+  
   func test_onAppear_getAllDisplayableAssets() async throws {
     let service = DashboardService(
       portfolioService: PortfolioService(networkClient: NetworkClient(environment: .preview)),
       currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
     )
     
-    let viewModel = DashboardViewModel(dashboardService: service)
+    let viewModel = DashboardViewModel(dashboardService: service, title: "Portfolio")
     precondition(viewModel.state == .loading)
     
     let expectation = XCTestExpectation(description: #function)

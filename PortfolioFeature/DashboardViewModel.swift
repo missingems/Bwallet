@@ -17,8 +17,8 @@ import Core
   private var cancellables = Set<AnyCancellable>()
   private let dashboardService: Service.DashboardService
   
-  public init(dashboardService: any Service.DashboardService) {
-    self.title = "Portfolio"
+  public init(dashboardService: any Service.DashboardService, title: String) {
+    self.title = title
     self.dashboardService = dashboardService
     self.state = .loading
   }

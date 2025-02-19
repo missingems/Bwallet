@@ -14,16 +14,23 @@ import PortfolioFeature
 struct BwalletApp: App {
   var body: some Scene {
     WindowGroup {
-      TabView {
-        DashboardView(
-          viewModel: DashboardViewModel(
-            dashboardService: DashboardService(
-              portfolioService: PortfolioService(networkClient: NetworkClient(environment: .preview)),
-              currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
+      RootView(
+        viewModel: RootViewModel(
+          tabs: [
+            .portfolio(
+              title: "Portfolio",
+              tabSystemIconName: "chart.bar.horizontal.page.fill",
+              viewModel: DashboardViewModel(
+                dashboardService: DashboardService(
+                  portfolioService: PortfolioService(networkClient: NetworkClient(environment: .preview)),
+                  currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
+                ),
+                title: "Portfolio"
+              )
             )
-          )
+          ]
         )
-      }
+      )
     }
   }
 }
