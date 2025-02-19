@@ -17,9 +17,9 @@ struct BwalletApp: App {
       TabView {
         DashboardView(
           viewModel: DashboardViewModel(
-            dashboardService: Dependency.DashboardService(
-              portfolioService: Dependency.PortfolioService(networkClient: Dependency.NetworkClient(environment: .preview)),
-              currencyService: Dependency.CurrencyService(networkClient: Dependency.NetworkClient(environment: .preview))
+            dashboardService: DashboardService(
+              portfolioService: PortfolioService(networkClient: NetworkClient(environment: .preview)),
+              currencyService: CurrencyService(networkClient: NetworkClient(environment: .preview))
             )
           )
         )
